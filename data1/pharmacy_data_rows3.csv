@@ -1,0 +1,201 @@
+Medicine_ID,Medicine_Name,Category,Stock_quantity,Price_per_unit,Supplier_Name,Expiry_Date,Purchase_Date,Reorder_Level,Prescription_Required
+MED001,Azithromycin,Injection,373,363.88,HealthCare Distributors,28-07-2027,05-12-2026,2.30E+01,NO
+MED002,Ibuprofen,Injection,12,512,Apollo Meds,20-10-2026,12-09-2025,98,YES 
+MED003,Vitamin C,Tablet,131,213.9,HealthCare Distributors,12-01-2026,29-10-2025,98,YES 
+MED004,Cetirizine,Syrup,467,421.11,MedLife Suppliers,06-04-2027,01-12-2026,74,NO
+MED005,Azithromycin,Capsule,229,242,ABC Pharma,28-07-2027,26-07-2027,68,NO
+MED006,Cetirizine,Syrup,110,424.89,MedLife Suppliers,20-10-2026,30-01-2025,62,NO
+MED007,Paracetamol,Capsule,487,250.12,MedLife Suppliers,12-01-2026,08-11-2025,88,YES 
+MED008,Omeprazole,Tablet,489,366,Sun pharma,06-04-2027,21-04-2026,39,NO
+MED009,Insulin,Injection,419,512.2,Apollo Meds,02-11-2027,01-10-2027,96,YES 
+MED010,Vitamin C,Capsule,240,476.77,ABC Pharma,20-10-2026,12-06-2025,67,YES 
+MED011,Omeprazole,Tablet,408,360,HealthCare Distributors,12-01-2026,12-07-2025,66,YES 
+MED012,Vitamin C,Capsule,98,119.78,Apollo Meds,06-04-2027,18-05-2026,96,YES 
+MED013,Metfromin,Syrup,73,250.66,HealthCare Distributors,28-07-2027,15-05-2025,64,NO
+MED014,Vitamin C,Capsule,210,250,ABC Pharma,17-09-2028,24-08-2026,34,YES 
+MED015,Dolo 650,Capsule,41,427,HealthCare Distributors,29-10-2026,31-03-2024,37,YES 
+MED016,Insulin,Injection,367,422.43,Apollo Meds,28-07-2025,04-12-2024,84,NO
+MED017,Paracetamol,Tablet,435,634.4,HealthCare Distributors,21-10-2028,12-11-2027,99,YES 
+MED018,Metfromin,Syrup,180,522,MedLife Suppliers,12-01-2026,08-09-2025,90,NO
+MED019,Amoxicillin,Injection,36,356.53,ABC Pharma,06-04-2027,16-09-2025,90,NO
+MED020,Ibuprofen,Tablet,229,242.66,MedLife Suppliers,28-07-2027,05-12-2026,29,YES 
+MED021,Azithromycin,Injection,343,643.77,MedLife Suppliers,20-10-2026,12-09-2025,41,YES 
+MED022,Ibuprofen,Injection,248,124.9,Sun pharma,12-12-2026,05-12-2026,26,YES 
+MED023,Vitamin C,Tablet,843,123,Apollo Meds,06-04-2027,12-09-2025,24,YES 
+MED024,Cetirizine,Syrup,23,534,ABC Pharma,02-11-2027,29-10-2025,85,YES 
+MED025,Azithromycin,Capsule,64,412.52,HealthCare Distributors,20-10-2026,01-12-2025,71,NO
+MED026,Cetirizine,Syrup,132,326.89,Apollo Meds,12-01-2026,26-07-2024,26,NO
+MED027,Paracetamol,Capsule,923,76.34,HealthCare Distributors,06-04-2027,30-01-2025,96,YES 
+MED028,Omeprazole,Injection,24,324.22,ABC Pharma,28-07-2027,08-11-2025,35,NO
+MED029,Insulin,Injection,922,532.64,HealthCare Distributors,17-09-2028,21-04-2027,55,YES 
+MED030,Vitamin C,Tablet,213,120,Apollo Meds,29-10-2026,01-10-2026,43,YES 
+MED031,Omeprazole,Syrup,53,100.1,HealthCare Distributors,28-07-2027,12-06-2025,89,YES 
+MED032,Vitamin C,Capsule,74,756.88,MedLife Suppliers,20-10-2026,12-07-2025,70,YES 
+MED033,Metfromin,Syrup,134,479,ABC Pharma,12-01-2026,18-05-2024,95,NO
+MED034,Vitamin C,Capsule,642,500,MedLife Suppliers,06-04-2027,15-05-2025,12,YES 
+MED035,Dolo 651,Tablet,757,639.55,MedLife Suppliers,28-07-2027,24-08-2026,75,NO
+MED036,Insulin,Injection,123,423.23,Sun pharma,20-10-2026,31-03-2024,90,YES 
+MED037,Paracetamol,Capsule,21,421.89,Apollo Meds,12-01-2026,04-12-2025,93,YES 
+MED038,Metfromin,Tablet,865,789.09,ABC Pharma,06-04-2027,12-11-2026,29,YES 
+MED039,Amoxicillin,Capsule,13,421.54,HealthCare Distributors,02-11-2027,08-09-2025,84,NO
+MED040,Ibuprofen,Syrup,75,642,Apollo Meds,20-10-2026,16-09-2025,49,YES 
+MED041,Azithromycin,Capsule,242,878.23,HealthCare Distributors,12-01-2026,05-12-2025,50,NO
+MED042,Ibuprofen,Capsule,756,535,ABC Pharma,06-04-2027,12-09-2025,66,NO
+MED043,Vitamin C,Injection,24,122,HealthCare Distributors,28-07-2027,05-12-2026,23,YES 
+MED044,Cetirizine,Tablet,543,214,Apollo Meds,17-09-2028,12-09-2025,45,NO
+MED045,Azithromycin,Syrup,132,543,HealthCare Distributors,29-10-2026,29-10-2025,76,YES 
+MED046,Cetirizine,Injection,127,523.99,MedLife Suppliers,28-07-2027,01-12-2026,34,YES 
+MED047,Paracetamol,Tablet,154,653.33,ABC Pharma,20-10-2026,26-07-2024,78,YES 
+MED048,Omeprazole,Injection,242,543.55,MedLife Suppliers,12-01-2026,30-01-2025,47,YES 
+MED049,Insulin,Injection,432,134.69,MedLife Suppliers,06-04-2027,08-11-2025,93,YES 
+MED050,Vitamin C,Tablet,12,437.99,Sun pharma,28-07-2027,21-04-2026,30,YES 
+MED051,Omeprazole,Syrup,42,462.44,Apollo Meds,20-10-2027,01-10-2027,56,YES 
+MED052,Vitamin C,Capsule,75,423.78,ABC Pharma,12-01-2026,12-06-2025,23,NO
+MED053,Metfromin,Syrup,235,422.44,HealthCare Distributors,06-04-2027,12-07-2025,57,NO
+MED054,Vitamin C,Capsule,235,764,Apollo Meds,02-11-2027,18-05-2026,74,NO
+MED055,Dolo 652,Injection,856,643,HealthCare Distributors,20-10-2026,15-05-2025,34,YES 
+MED056,Insulin,Injection,124,89,ABC Pharma,12-01-2026,24-08-2025,85,YES 
+MED057,Azithromycin,Tablet,21,874.44,HealthCare Distributors,06-04-2027,31-03-2024,24,NO
+MED058,Ibuprofen,Syrup,64,423,Apollo Meds,28-07-2027,04-12-2025,45,NO
+MED059,Vitamin C,Capsule,42,290,HealthCare Distributors,17-09-2028,12-11-2027,66,NO
+MED060,Cetirizine,Syrup,642,432,MedLife Suppliers,29-10-2026,08-09-2025,111,NO
+MED061,Azithromycin,Capsule,674,677.55,ABC Pharma,28-07-2027,16-09-2025,65,NO
+MED062,Cetirizine,Tablet,532,733,MedLife Suppliers,20-10-2026,05-01-2026,83,YES 
+MED063,Paracetamol,Injection,124,954,MedLife Suppliers,12-01-2026,12-09-2025,73,YES 
+MED064,Omeprazole,Capsule,345,644.77,Sun pharma,06-04-2027,05-12-2026,39,YES 
+MED065,Insulin,Tablet,422,500.9,Apollo Meds,28-07-2027,12-09-2025,40,NO
+MED066,Vitamin C,Capsule,464,899.4,ABC Pharma,20-10-2026,29-10-2025,72,NO
+MED067,Omeprazole,Syrup,745,643,HealthCare Distributors,12-01-2026,01-12-2024,60,YES 
+MED068,Vitamin C,Capsule,535,434.99,Apollo Meds,06-04-2027,26-07-2026,43,NO
+MED069,Metfromin,Capsule,235,290,HealthCare Distributors,02-11-2027,30-01-2025,78,NO
+MED070,Vitamin C,Injection,12,344.78,ABC Pharma,20-10-2026,08-11-2025,112,YES 
+MED071,Dolo 651,Tablet,75,543,HealthCare Distributors,12-01-2026,23-04-2025,130,YES 
+MED072,Insulin,Syrup,421,980,Apollo Meds,06-12-2027,01-10-2027,62,YES 
+MED073,Paracetamol,Injection,535,106.88,HealthCare Distributors,28-07-2027,12-06-2025,88,NO
+MED074,Metfromin,Tablet,235,150,MedLife Suppliers,17-09-2028,12-07-2025,53,NO
+MED075,Amoxicillin,Injection,43,322,ABC Pharma,29-10-2026,18-05-2026,94,YES 
+MED076,Ibuprofen,Injection,242,43.54,MedLife Suppliers,28-07-2027,15-05-2025,66,NO
+MED077,Azithromycin,Tablet,121,423.56,MedLife Suppliers,20-10-2026,24-08-2026,34,YES 
+MED078,Ibuprofen,Syrup,53,75.4,Sun pharma,12-01-2026,31-03-2024,133,YES 
+MED079,Vitamin C,Capsule,246,243.66,Apollo Meds,06-04-2027,04-12-2025,75,YES 
+MED080,Cetirizine,Syrup,35,642,ABC Pharma,28-07-2027,12-11-2026,53,YES 
+MED081,Azithromycin,Capsule,235,645,HealthCare Distributors,20-10-2026,08-09-2025,39,NO
+MED082,Cetirizine,Injection,644,423,Apollo Meds,12-01-2026,16-09-2025,91,NO
+MED083,Paracetamol,Injection,232,677,HealthCare Distributors,06-04-2027,05-12-2026,10,NO
+MED084,Omeprazole,Tablet,64,565,ABC Pharma,02-11-2027,12-09-2025,27,YES 
+MED085,Insulin,Syrup,312,454,HealthCare Distributors,20-10-2026,05-06-2026,128,YES 
+MED086,Vitamin C,Capsule,56,978,Apollo Meds,12-01-2026,12-09-2025,53,YES 
+MED087,Omeprazole,Syrup,214,799,HealthCare Distributors,06-04-2027,29-10-2025,764,YES 
+MED088,Vitamin C,Capsule,75,789,MedLife Suppliers,28-07-2027,01-12-2026,85,NO
+MED089,Metfromin,Tablet,234,654,ABC Pharma,17-09-2028,26-07-2027,343,YES 
+MED090,Vitamin C,Injection,987,453,MedLife Suppliers,29-10-2026,30-01-2025,54,YES 
+MED091,Dolo 652,Capsule,24,374,MedLife Suppliers,28-07-2027,08-11-2025,77,NO
+MED092,Insulin,Tablet,235,657,Sun pharma,20-10-2026,20-10-2025,331,NO
+MED093,Paracetamol,Capsule,13,234,Apollo Meds,12-01-2026,01-10-2024,97,YES 
+MED094,Metfromin,Syrup,42,867.65,ABC Pharma,06-04-2027,12-06-2025,57,YES 
+MED095,Amoxicillin,Capsule,53,12.77,HealthCare Distributors,28-07-2027,12-07-2025,87,NO
+MED096,Ibuprofen,Capsule,412,867.77,Apollo Meds,20-10-2026,18-05-2026,320,NO
+MED097,Azithromycin,Injection,642,234,HealthCare Distributors,12-01-2026,15-05-2025,110,NO
+MED098,Ibuprofen,Tablet,224,190.67,ABC Pharma,06-04-2027,24-08-2026,32,YES 
+MED099,Vitamin C,Syrup,24,299,HealthCare Distributors,02-11-2027,31-03-2024,35,YES 
+MED100,Cetirizine,Injection,90,101.99,Apollo Meds,20-10-2026,04-12-2025,70,YES 
+MED101,Azithromycin,Injection,36,363.88,HealthCare Distributors,28-07-2027,05-12-2026,98,NO
+MED102,Ibuprofen,Injection,233,512,Apollo Meds,20-10-2026,12-09-2025,98,YES 
+MED103,Vitamin C,Tablet,532,213.9,HealthCare Distributors,12-01-2026,29-10-2025,74,YES 
+MED104,Cetirizine,Syrup,234,421.11,MedLife Suppliers,06-04-2027,01-12-2026,68,NO
+MED105,Azithromycin,Capsule,532,242,ABC Pharma,28-07-2027,26-07-2027,62,NO
+MED106,Cetirizine,Syrup,56,424.89,MedLife Suppliers,20-10-2026,30-01-2025,88,NO
+MED107,Paracetamol,Capsule,234,250.12,MedLife Suppliers,12-01-2026,08-11-2025,39,YES 
+MED108,Omeprazole,Tablet,675,366,Sun pharma,06-04-2027,21-04-2026,96,NO
+MED109,Insulin,Injection,23,512.2,Apollo Meds,02-11-2027,01-10-2027,67,YES 
+MED110,Vitamin C,Capsule,34,476.77,ABC Pharma,20-10-2026,12-06-2025,66,YES 
+MED111,Omeprazole,Tablet,54,360,HealthCare Distributors,12-01-2026,12-07-2025,96,YES 
+MED112,Azithromycin,Capsule,53,119.78,Apollo Meds,06-04-2027,18-05-2026,64,YES 
+MED113,Ibuprofen,Syrup,76,250.66,HealthCare Distributors,28-07-2027,15-05-2025,34,NO
+MED114,Vitamin C,Capsule,24,250,ABC Pharma,17-09-2028,24-08-2026,37,YES 
+MED115,Cetirizine,Capsule,754,427,HealthCare Distributors,29-10-2026,31-03-2024,84,YES 
+MED116,Azithromycin,Injection,35,422.43,Apollo Meds,28-07-2025,04-12-2024,99,NO
+MED117,Cetirizine,Tablet,753,634.4,HealthCare Distributors,21-10-2028,12-11-2027,90,YES 
+MED118,Paracetamol,Syrup,32,522,MedLife Suppliers,12-01-2026,08-09-2025,90,NO
+MED119,Omeprazole,Injection,534,356.53,ABC Pharma,06-04-2027,16-09-2025,29,NO
+MED120,Insulin,Tablet,35,242.66,MedLife Suppliers,28-07-2027,05-12-2026,41,YES 
+MED121,Vitamin C,Injection,85,643.77,MedLife Suppliers,20-10-2026,12-09-2025,26,YES 
+MED122,Omeprazole,Injection,73,124.9,Sun pharma,12-12-2026,05-12-2026,24,YES 
+MED123,Vitamin C,Tablet,854,123,Apollo Meds,06-04-2027,12-09-2025,85,YES 
+MED124,Metfromin,Syrup,86,534,ABC Pharma,02-11-2027,29-10-2025,71,YES 
+MED125,Vitamin C,Capsule,57,412.52,HealthCare Distributors,20-10-2026,01-12-2025,26,NO
+MED126,Dolo 651,Syrup,243,326.89,Apollo Meds,12-01-2026,26-07-2024,96,NO
+MED127,Insulin,Capsule,743,76.34,HealthCare Distributors,06-04-2027,30-01-2025,35,YES 
+MED128,Paracetamol,Injection,75,324.22,ABC Pharma,28-07-2027,08-11-2025,55,NO
+MED129,Metfromin,Injection,86,532.64,HealthCare Distributors,17-09-2028,21-04-2027,43,YES 
+MED130,Amoxicillin,Tablet,13,120,Apollo Meds,29-10-2026,01-10-2026,89,YES 
+MED131,Ibuprofen,Syrup,35,100.1,HealthCare Distributors,28-07-2027,12-06-2025,70,YES 
+MED132,Azithromycin,Capsule,84,756.88,MedLife Suppliers,20-10-2026,12-07-2025,95,YES 
+MED133,Ibuprofen,Syrup,463,479,ABC Pharma,12-01-2026,18-05-2024,12,NO
+MED134,Vitamin C,Capsule,74,500,MedLife Suppliers,06-04-2027,15-05-2025,75,YES 
+MED135,Cetirizine,Tablet,234,639.55,MedLife Suppliers,28-07-2027,24-08-2026,90,NO
+MED136,Azithromycin,Injection,674,423.23,Sun pharma,20-10-2026,31-03-2024,93,YES 
+MED137,Cetirizine,Capsule,89,421.89,Apollo Meds,12-01-2026,04-12-2025,29,YES 
+MED138,Paracetamol,Tablet,21,789.09,ABC Pharma,06-04-2027,12-11-2026,84,YES 
+MED139,Omeprazole,Capsule,13,421.54,HealthCare Distributors,02-11-2027,08-09-2025,49,NO
+MED140,Insulin,Syrup,33,642,Apollo Meds,20-10-2026,16-09-2025,50,YES 
+MED141,Vitamin C,Capsule,311,878.23,HealthCare Distributors,12-01-2026,05-12-2025,66,NO
+MED142,Omeprazole,Capsule,900,535,ABC Pharma,06-04-2027,12-09-2025,23,NO
+MED143,Vitamin C,Injection,422,122,HealthCare Distributors,28-07-2027,05-12-2026,45,YES 
+MED144,Metfromin,Tablet,423,214,Apollo Meds,17-09-2028,12-09-2025,76,NO
+MED145,Vitamin C,Syrup,244,543,HealthCare Distributors,29-10-2026,29-10-2025,34,YES 
+MED146,Dolo 652,Injection,22,523.99,MedLife Suppliers,28-07-2027,01-12-2026,78,YES 
+MED147,Insulin,Tablet,24,653.33,ABC Pharma,20-10-2026,26-07-2024,47,YES 
+MED148,Paracetamol,Injection,243,543.55,MedLife Suppliers,12-01-2026,30-01-2025,93,YES 
+MED149,Metfromin,Injection,352,134.69,MedLife Suppliers,06-04-2027,08-11-2025,30,YES 
+MED150,Amoxicillin,Tablet,523,437.99,Sun pharma,28-07-2027,21-04-2026,56,YES 
+MED151,Ibuprofen,Syrup,856,462.44,Apollo Meds,20-10-2027,01-10-2027,23,YES 
+MED152,Azithromycin,Capsule,874,423.78,ABC Pharma,12-01-2026,12-06-2025,57,NO
+MED153,Ibuprofen,Syrup,213,422.44,HealthCare Distributors,06-04-2027,12-07-2025,74,NO
+MED154,Vitamin C,Capsule,131,764,Apollo Meds,02-11-2027,18-05-2026,34,NO
+MED155,Cetirizine,Injection,141,643,HealthCare Distributors,20-10-2026,15-05-2025,85,YES 
+MED156,Azithromycin,Injection,63,89,ABC Pharma,12-01-2026,24-08-2025,24,YES 
+MED157,Cetirizine,Tablet,876,874.44,HealthCare Distributors,06-04-2027,31-03-2024,45,NO
+MED158,Paracetamol,Syrup,654,423,Apollo Meds,28-07-2027,04-12-2025,66,NO
+MED159,Omeprazole,Capsule,234,290,HealthCare Distributors,17-09-2028,12-11-2027,111,NO
+MED160,Insulin,Syrup,21,432,MedLife Suppliers,29-10-2026,08-09-2025,65,NO
+MED161,Vitamin C,Capsule,321,677.55,ABC Pharma,28-07-2027,16-09-2025,83,NO
+MED162,Omeprazole,Tablet,53,733,MedLife Suppliers,20-10-2026,05-01-2026,73,YES 
+MED163,Vitamin C,Injection,890,954,MedLife Suppliers,12-01-2026,12-09-2025,39,YES 
+MED164,Metfromin,Capsule,654,644.77,Sun pharma,06-04-2027,05-12-2026,40,YES 
+MED165,Vitamin C,Tablet,342,500.9,Apollo Meds,28-07-2027,12-09-2025,72,NO
+MED166,Dolo 653,Capsule,312,899.4,ABC Pharma,20-10-2026,29-10-2025,60,NO
+MED167,Insulin,Syrup,76,643,HealthCare Distributors,12-01-2026,01-12-2024,43,YES 
+MED168,Azithromycin,Capsule,423,434.99,Apollo Meds,06-04-2027,26-07-2026,78,NO
+MED169,Ibuprofen,Capsule,123,290,HealthCare Distributors,02-11-2027,30-01-2025,112,NO
+MED170,Vitamin C,Injection,88,344.78,ABC Pharma,20-10-2026,08-11-2025,130,YES 
+MED171,Cetirizine,Tablet,11,543,HealthCare Distributors,12-01-2026,23-04-2025,62,YES 
+MED172,Azithromycin,Syrup,10,980,Apollo Meds,06-12-2027,01-10-2027,88,YES 
+MED173,Cetirizine,Injection,99,106.88,HealthCare Distributors,28-07-2027,12-06-2025,53,NO
+MED174,Paracetamol,Tablet,123,150,MedLife Suppliers,17-09-2028,12-07-2025,94,NO
+MED175,Omeprazole,Injection,835,322,ABC Pharma,29-10-2026,18-05-2026,66,YES 
+MED176,Insulin,Injection,537,43.54,MedLife Suppliers,28-07-2027,15-05-2025,34,NO
+MED177,Vitamin C,Tablet,76,423.56,MedLife Suppliers,20-10-2026,24-08-2026,133,YES 
+MED178,Omeprazole,Syrup,63,75.4,Sun pharma,12-01-2026,31-03-2024,75,YES 
+MED179,Vitamin C,Capsule,87,243.66,Apollo Meds,06-04-2027,04-12-2025,53,YES 
+MED180,Metfromin,Syrup,55,642,ABC Pharma,28-07-2027,12-11-2026,39,YES 
+MED181,Vitamin C,Capsule,33,645,HealthCare Distributors,20-10-2026,08-09-2025,91,NO
+MED182,Dolo 652,Injection,87,423,Apollo Meds,12-01-2026,16-09-2025,10,NO
+MED183,Insulin,Injection,334,677,HealthCare Distributors,06-04-2027,05-12-2026,27,NO
+MED184,Paracetamol,Tablet,766,565,ABC Pharma,02-11-2027,12-09-2025,128,YES 
+MED185,Metfromin,Syrup,43,454,HealthCare Distributors,20-10-2026,05-06-2026,53,YES 
+MED186,Amoxicillin,Capsule,234,978,Apollo Meds,12-01-2026,12-09-2025,764,YES 
+MED187,Ibuprofen,Syrup,12,799,HealthCare Distributors,06-04-2027,29-10-2025,85,YES 
+MED188,Azithromycin,Capsule,75,789,MedLife Suppliers,28-07-2027,01-12-2026,343,NO
+MED189,Ibuprofen,Tablet,421,654,ABC Pharma,17-09-2028,26-07-2027,54,YES 
+MED190,Vitamin C,Injection,535,453,MedLife Suppliers,29-10-2026,30-01-2025,77,YES 
+MED191,Cetirizine,Capsule,235,374,MedLife Suppliers,28-07-2027,08-11-2025,331,NO
+MED192,Azithromycin,Tablet,43,657,Sun pharma,20-10-2026,20-10-2025,97,NO
+MED193,Cetirizine,Capsule,242,234,Apollo Meds,12-01-2026,01-10-2024,57,YES 
+MED194,Paracetamol,Syrup,121,867.65,ABC Pharma,06-04-2027,12-06-2025,87,YES 
+MED195,Omeprazole,Capsule,53,12.77,HealthCare Distributors,28-07-2027,12-07-2025,320,NO
+MED196,Insulin,Capsule,246,867.77,Apollo Meds,20-10-2026,18-05-2026,110,NO
+MED197,Vitamin C,Injection,35,234,HealthCare Distributors,12-01-2026,15-05-2025,32,NO
+MED198,Omeprazole,Tablet,235,190.67,ABC Pharma,06-04-2027,24-08-2026,35,YES 
+MED199,Vitamin C,Syrup,644,299,HealthCare Distributors,02-11-2027,31-03-2024,70,YES 
+MED200,Metfromin,Injection,232,101.99,Apollo Meds,20-10-2026,04-12-2025,12,YES 

@@ -1,0 +1,11 @@
+Medicine_ID,Medicine_Name,Category,Stock_Quantity,Price_per_unit,Supplier_Name,Expiry_Date,Purchase_Date,Reorder_Level,Prescription_Required,Units_Sold,Storage_Location
+MED1673,Cetirizine,Injection,1149.9,214.72,Healthcare Distributors,2028-06-01,19-10-2025,60.0,Yes,109.0,Rack B
+MED817,Paracetamol,Tablet,1149.9,329.79,Pharmaplus,2027-03-04,18-05-2025,18.0,No,178.0,Rack C
+MED1069,Ibuprofen,Tablet,1149.9,460.13,Apollo Meds,2027-11-16,11-07-2025,54.0,No,272.0,Rack C
+MED465,Vitamin C,Tablet,1149.9,176.87,Wellness Pharma,2028-04-01,13-11-2025,17.0,No,136.0,Rack C
+MED1421,Azithromycin,Capsule,1149.9,314.85,Apollo Meds,2026-09-30,19-01-2025,76.0,No,206.0,Cold Storage
+MED213,Metformin,Syrup,1149.9,146.48,Caremed Pvt Ltd,2028-01-08,19-05-2025,82.0,Yes,131.0,Rack A
+MED464,Metfromin,Capsule,1091.8,449.19,Medisupply Co.,2029-07-15,26-06-2025,34.0,No,99.0,Cold Storage
+MED1672,Azithromycin,Syrup,1091.8,27.39,Pharmaplus,2026-12-28,27-11-2025,94.0,No,297.0,Cold Storage
+MED212,Vitamin C,Capsule,1091.8,343.9,Caremed Pvt Ltd,2027-05-31,05-01-2025,33.0,No,299.0,Shelf 2
+MED816,Paracetamol,Injection,1091.8,14.9,Wellness Pharma,2028-12-26,07-03-2025,88.0,Yes,45.0,Rack B

@@ -1,0 +1,310 @@
+Medicine_ID,Medicine_Name,Category,Stock_Quantity,Price_per_unit,Supplier_Name,Expiry_Date,Purchase_Date,Reorder_Level,Prescription_Required,Units_Sold,Storage_Location
+MED002,Ibuprofen,Injection,12.0,512.0,Apollo Meds,2026-10-20,12-09-2025,98.0,YES ,53.0,Shelf 1
+MED039,Amoxicillin,Capsule,13.0,421.54,Healthcare Distributors,2027-11-02,08-09-2025,84.0,NO,167.0,Rack A
+MED050,Vitamin C,Tablet,12.0,437.99,Sun Pharma,2027-07-28,21-04-2026,30.0,YES ,132.0,Rack C
+MED070,Vitamin C,Injection,12.0,344.78,Abc Pharma,2026-10-20,08-11-2025,112.0,YES ,9.0,Rack B
+MED093,Paracetamol,Capsule,13.0,234.0,Apollo Meds,2026-01-12,01-10-2024,97.0,YES ,188.0,Rack C
+MED130,Amoxicillin,Tablet,13.0,120.0,Apollo Meds,2026-10-29,01-10-2026,89.0,YES ,134.0,Cold Storage
+MED139,Omeprazole,Capsule,13.0,421.54,Healthcare Distributors,2027-11-02,08-09-2025,49.0,NO,159.0,Rack B
+MED171,Cetirizine,Tablet,11.0,543.0,Healthcare Distributors,2026-01-12,23-04-2025,62.0,YES ,295.0,Rack A
+MED172,Azithromycin,Syrup,10.0,980.0,Apollo Meds,2027-12-06,01-10-2027,88.0,YES ,136.0,Rack B
+MED187,Ibuprofen,Syrup,12.0,799.0,Healthcare Distributors,2027-04-06,29-10-2025,85.0,YES ,244.0,Shelf 1
+MED231,Metformin,Tablet,13.0,162.9,Apollo Meds,2027-07-16,05-05-2025,38.0,Yes,26.0,Rack A
+MED240,Azithromycin,Capsule,13.0,89.95,Apollo Meds,2027-02-18,14-07-2025,86.0,No,293.0,Rack A
+MED254,Cetirizine,Syrup,12.0,340.59,Medisupply Co.,2028-09-06,02-02-2025,35.0,Yes,28.0,Shelf 1
+MED291,Insulin,Tablet,13.0,279.41,Wellness Pharma,2027-11-06,28-03-2025,35.0,No,240.0,Cold Storage
+MED302,Ibuprofen,Injection,12.0,491.54,Medisupply Co.,2028-05-10,29-03-2025,60.0,Yes,107.0,Rack B
+MED322,Ibuprofen,Syrup,12.0,227.15,Pharmaplus,2027-04-12,09-05-2025,11.0,No,186.0,Rack A
+MED345,Azithromycin,Injection,13.0,75.74,Wellness Pharma,2028-11-08,26-07-2025,92.0,No,237.0,Rack C
+MED382,Cetirizine,Tablet,13.0,120.15,Apollo Meds,2028-02-05,02-09-2025,12.0,Yes,147.0,Shelf 1
+MED391,Dolo 653,Tablet,13.0,160.25,Wellness Pharma,2027-10-28,10-08-2025,95.0,No,31.0,Shelf 2
+MED423,Vitamin C,Tablet,11.0,309.53,Medisupply Co.,2027-12-28,01-03-2025,91.0,Yes,155.0,Rack A
+MED424,Metfromin,Syrup,10.0,311.19,Caremed Pvt Ltd,2029-05-04,26-08-2025,71.0,Yes,193.0,Rack C
+MED439,Omeprazole,Capsule,12.0,476.37,Caremed Pvt Ltd,2027-06-16,13-10-2025,77.0,Yes,73.0,Shelf 1
+MED483,Insulin,Injection,13.0,311.7,Healthcare Distributors,2027-08-15,01-07-2025,40.0,Yes,156.0,Rack B
+MED492,Azithromycin,Tablet,13.0,386.43,Wellness Pharma,2027-02-17,12-06-2025,66.0,No,100.0,Shelf 2
+MED506,Cetirizine,Syrup,12.0,365.82,Medisupply Co.,2027-12-06,31-08-2025,12.0,No,179.0,Cold Storage
+MED563,Metformin,Injection,18.0,331.15,Caremed Pvt Ltd,2028-07-08,14-12-2025,70.0,Yes,238.0,Shelf 2
+MED588,Omeprazole,Capsule,14.0,72.37,Wellness Pharma,2029-09-08,20-02-2025,18.0,No,214.0,Shelf 1
+MED606,Cetirizine,Tablet,12.0,93.82,Medisupply Co.,2027-07-01,02-08-2025,27.0,No,255.0,Rack B
+MED643,Vitamin C,Tablet,13.0,335.98,Healthcare Distributors,2026-11-05,29-10-2025,11.0,No,105.0,Rack A
+MED654,Vitamin C,Syrup,12.0,490.45,Apollo Meds,2027-04-13,06-06-2025,31.0,Yes,46.0,Rack C
+MED674,Metfromin,Injection,12.0,181.58,Wellness Pharma,2028-07-02,19-08-2025,28.0,Yes,141.0,Rack B
+MED697,Azithromycin,Injection,13.0,164.92,Wellness Pharma,2026-02-20,06-10-2025,63.0,Yes,93.0,Rack A
+MED734,Vitamin C,Tablet,13.0,259.5,Healthcare Distributors,2027-04-05,27-08-2025,58.0,Yes,174.0,Rack A
+MED743,Vitamin C,Tablet,13.0,252.16,Apollo Meds,2028-10-29,30-06-2025,32.0,Yes,252.0,Rack B
+MED775,Omeprazole,Syrup,11.0,422.79,Apollo Meds,2027-06-13,19-12-2025,63.0,Yes,61.0,Shelf 2
+MED776,Insulin,Capsule,10.0,329.11,Apollo Meds,2026-11-15,20-03-2025,67.0,Yes,136.0,Rack A
+MED791,Cetirizine,Tablet,12.0,77.42,Healthcare Distributors,2028-07-12,09-11-2025,76.0,Yes,175.0,Rack C
+MED835,Paracetamol,Tablet,13.0,30.52,Healthcare Distributors,2027-01-08,08-06-2025,18.0,No,235.0,Rack C
+MED844,Omeprazole,Tablet,13.0,495.96,Caremed Pvt Ltd,2026-10-31,07-01-2025,93.0,No,33.0,Cold Storage
+MED858,Metformin,Syrup,12.0,377.41,Healthcare Distributors,2026-12-30,28-07-2025,10.0,Yes,85.0,Rack C
+MED895,Ibuprofen,Capsule,13.0,381.31,Caremed Pvt Ltd,2028-02-18,30-05-2025,26.0,Yes,73.0,Rack B
+MED906,Cetirizine,Syrup,12.0,263.79,Healthcare Distributors,2027-07-04,13-02-2025,40.0,No,80.0,Rack B
+MED926,Cetirizine,Syrup,12.0,407.25,Wellness Pharma,2026-10-07,15-08-2025,81.0,Yes,93.0,Cold Storage
+MED949,Insulin,Injection,13.0,212.96,Healthcare Distributors,2026-11-24,16-03-2025,98.0,Yes,122.0,Rack A
+MED986,Vitamin C,Capsule,13.0,223.59,Medisupply Co.,2027-12-12,17-11-2025,57.0,No,203.0,Rack C
+MED995,Amoxicillin,Capsule,13.0,42.94,Medisupply Co.,2028-10-11,01-06-2025,95.0,Yes,247.0,Shelf 2
+MED1027,Insulin,Tablet,11.0,429.88,Healthcare Distributors,2027-09-10,01-11-2025,21.0,Yes,279.0,Rack B
+MED1028,Paracetamol,Tablet,10.0,140.76,Healthcare Distributors,2028-11-10,05-12-2025,52.0,Yes,212.0,Rack A
+MED1043,Vitamin C,Tablet,12.0,483.79,Wellness Pharma,2026-09-26,07-03-2025,49.0,Yes,266.0,Shelf 2
+MED1087,Ibuprofen,Injection,13.0,244.83,Healthcare Distributors,2029-12-17,19-08-2025,77.0,No,44.0,Rack A
+MED1096,Insulin,Injection,13.0,19.39,Apollo Meds,2029-04-07,09-07-2025,46.0,Yes,2.0,Shelf 2
+MED1110,Vitamin C,Capsule,12.0,67.36,Pharmaplus,2028-01-21,13-08-2025,54.0,No,293.0,Shelf 1
+MED1167,Vitamin C,Injection,18.0,297.67,Medisupply Co.,2027-02-04,27-06-2025,96.0,No,239.0,Shelf 2
+MED1192,Metformin,Syrup,14.0,37.14,Healthcare Distributors,2027-04-26,22-12-2025,20.0,Yes,9.0,Rack A
+MED1210,Vitamin C,Capsule,12.0,193.96,Caremed Pvt Ltd,2027-06-07,15-10-2025,75.0,Yes,150.0,Rack B
+MED1247,Paracetamol,Tablet,13.0,308.95,Medisupply Co.,2028-11-09,17-08-2025,99.0,Yes,103.0,Shelf 1
+MED1258,Ibuprofen,Syrup,12.0,439.62,Pharmaplus,2028-03-08,12-07-2025,85.0,Yes,209.0,Rack C
+MED1278,Ibuprofen,Syrup,12.0,141.54,Apollo Meds,2029-04-27,09-12-2025,46.0,Yes,36.0,Cold Storage
+MED1301,Azithromycin,Injection,13.0,87.46,Wellness Pharma,2027-12-29,12-07-2025,10.0,Yes,1.0,Rack C
+MED1338,Paracetamol,Tablet,13.0,66.52,Caremed Pvt Ltd,2029-08-05,19-01-2025,33.0,Yes,139.0,Rack B
+MED1347,Insulin,Tablet,13.0,465.52,Wellness Pharma,2028-08-03,21-11-2025,54.0,No,242.0,Cold Storage
+MED1379,Vitamin C,Capsule,11.0,330.7,Medisupply Co.,2027-07-10,10-01-2025,46.0,No,50.0,Rack A
+MED1380,Metfromin,Syrup,10.0,217.06,Healthcare Distributors,2029-04-04,25-04-2025,73.0,Yes,59.0,Rack A
+MED1395,Omeprazole,Capsule,12.0,237.53,Caremed Pvt Ltd,2028-10-29,13-08-2025,82.0,No,221.0,Rack B
+MED1439,Azithromycin,Injection,13.0,35.35,Medisupply Co.,2026-07-14,07-09-2025,24.0,No,0.0,Rack B
+MED1448,Metformin,Capsule,13.0,35.84,Healthcare Distributors,2027-05-17,16-07-2025,37.0,Yes,193.0,Rack C
+MED1462,Cetirizine,Syrup,12.0,24.44,Apollo Meds,2028-01-27,16-08-2025,80.0,No,37.0,Rack C
+MED1499,Dolo 650,Tablet,13.0,135.98,Caremed Pvt Ltd,2028-06-24,28-04-2025,10.0,Yes,105.0,Rack B
+MED1510,Vitamin C,Capsule,12.0,200.97,Healthcare Distributors,2027-01-25,29-04-2025,38.0,Yes,32.0,Cold Storage
+MED1530,Vitamin C,Syrup,12.0,447.28,Caremed Pvt Ltd,2029-01-14,29-07-2025,82.0,No,186.0,Shelf 1
+MED1553,Metfromin,Syrup,13.0,97.15,Caremed Pvt Ltd,2029-01-06,04-09-2025,73.0,Yes,193.0,Rack B
+MED1590,Vitamin C,Injection,13.0,428.27,Pharmaplus,2027-05-22,24-07-2025,58.0,No,221.0,Shelf 2
+MED1599,Vitamin C,Tablet,13.0,498.72,Wellness Pharma,2026-06-02,05-05-2025,59.0,Yes,269.0,Shelf 2
+MED1631,Ibuprofen,Syrup,11.0,28.12,Apollo Meds,2027-08-27,15-05-2025,14.0,No,40.0,Shelf 2
+MED1632,Azithromycin,Capsule,10.0,48.35,Medisupply Co.,2029-02-16,01-01-2026,63.0,No,64.0,Cold Storage
+MED1647,Insulin,Tablet,12.0,251.7,Healthcare Distributors,2028-09-06,03-10-2025,17.0,Yes,23.0,Shelf 1
+MED1691,Cetirizine,Capsule,13.0,140.71,Caremed Pvt Ltd,2027-04-25,23-03-2025,38.0,Yes,43.0,Shelf 2
+MED1700,Metfromin,Injection,13.0,143.79,Medisupply Co.,2029-02-22,18-04-2025,43.0,No,77.0,Rack B
+MED1714,Vitamin C,Capsule,12.0,95.36,Apollo Meds,2028-06-13,25-09-2025,14.0,No,167.0,Rack B
+MED1771,Omeprazole,Tablet,18.0,180.23,Medisupply Co.,2027-09-28,12-01-2025,69.0,No,269.0,Rack B
+MED1796,Ibuprofen,Capsule,14.0,331.13,Apollo Meds,2027-04-02,06-11-2025,90.0,Yes,92.0,Rack C
+MED1986,Amoxicillin,Capsule,14.0,386.47,Healthcare Distributors,2026-09-28,21-02-2025,34.0,Yes,298.0,Rack A
+MED1987,Ibuprofen,Injection,10.0,430.28,Pharmaplus,2028-06-27,26-04-2025,34.0,No,113.0,Rack B
+MED2030,Cetirizine,Tablet,15.0,167.4,Healthcare Distributors,2027-05-13,12-01-2025,48.0,No,202.0,Shelf 1
+MED2063,Metformin,Injection,6.0,140.14,Pharmaplus,2027-11-07,27-12-2025,62.0,Yes,251.0,Rack A
+MED2131,Omeprazole,Syrup,15.0,125.01,Pharmaplus,2029-05-15,21-01-2025,80.0,Yes,267.0,Shelf 2
+MED2137,Paracetamol,Capsule,17.0,451.24,Caremed Pvt Ltd,2027-02-22,30-01-2025,12.0,No,187.0,Cold Storage
+MED2152,Vitamin C,Capsule,10.0,405.2,Healthcare Distributors,2028-08-03,27-08-2025,98.0,No,103.0,Rack A
+MED2198,Ibuprofen,Tablet,8.0,336.95,Wellness Pharma,2027-12-17,01-01-2025,15.0,Yes,199.0,Shelf 2
+MED2233,Ibuprofen,Syrup,8.0,365.41,Caremed Pvt Ltd,2027-12-29,29-11-2025,100.0,Yes,122.0,Cold Storage
+MED2243,Vitamin C,Tablet,9.0,115.68,Caremed Pvt Ltd,2028-04-28,01-12-2025,90.0,Yes,162.0,Rack B
+MED2348,Metformin,Capsule,14.0,382.11,Healthcare Distributors,2029-07-10,05-08-2025,42.0,Yes,208.0,Shelf 2
+MED2373,Ibuprofen,Syrup,11.0,228.99,Pharmaplus,2028-05-11,26-07-2025,49.0,Yes,206.0,Rack A
+MED2390,Azithromycin,Injection,5.0,35.23,Apollo Meds,2028-05-19,16-10-2025,47.0,Yes,290.0,Shelf 2
+MED2435,Dolo 659,Tablet,15.0,199.78,Apollo Meds,2026-08-14,25-01-2025,20.0,No,5.0,Shelf 2
+MED2489,Metfromin,Tablet,9.0,309.75,Medisupply Co.,2026-11-27,09-11-2025,80.0,No,187.0,Rack A
+MED2499,Vitamin C,Syrup,19.0,170.16,Medisupply Co.,2029-02-26,22-02-2025,89.0,Yes,150.0,Rack A
+MED2517,Cetirizine,Tablet,7.0,356.24,Healthcare Distributors,2028-07-02,01-10-2025,33.0,Yes,257.0,Rack C
+MED2567,Insulin,Syrup,19.0,202.54,Healthcare Distributors,2028-06-11,14-07-2025,72.0,Yes,135.0,Rack A
+MED2606,Cetirizine,Tablet,15.0,81.22,Pharmaplus,2028-01-14,23-02-2025,41.0,No,112.0,Rack A
+MED2616,Paracetamol,Tablet,17.0,401.41,Wellness Pharma,2027-11-04,21-10-2025,17.0,No,114.0,Rack C
+MED2742,Ibuprofen,Syrup,13.0,396.04,Wellness Pharma,2028-08-10,30-11-2025,63.0,Yes,295.0,Shelf 2
+MED2880,Metfromin,Syrup,16.0,147.95,Pharmaplus,2027-03-10,11-10-2025,36.0,Yes,135.0,Shelf 2
+MED2907,Paracetamol,Capsule,15.0,338.56,Healthcare Distributors,2027-11-28,09-07-2025,22.0,No,275.0,Rack A
+MED2939,Azithromycin,Capsule,13.0,490.99,Medisupply Co.,2028-08-04,10-01-2025,52.0,No,179.0,Rack A
+MED2971,Omeprazole,Tablet,17.0,292.52,Medisupply Co.,2027-07-19,26-07-2025,14.0,No,260.0,Cold Storage
+MED2996,Ibuprofen,Capsule,15.0,445.34,Apollo Meds,2028-05-03,09-12-2025,18.0,No,84.0,Rack B
+MED3049,Insulin,Injection,14.0,81.39,Pharmaplus,2028-10-21,25-06-2025,37.0,No,59.0,Rack B
+MED3069,Metfromin,Tablet,15.0,126.95,Pharmaplus,2028-12-04,01-03-2025,74.0,Yes,74.0,Shelf 2
+MED3096,Ibuprofen,Injection,19.0,225.12,Caremed Pvt Ltd,2026-11-21,07-10-2025,34.0,No,81.0,Shelf 2
+MED3102,Ibuprofen,Injection,14.0,155.62,Caremed Pvt Ltd,2028-03-17,04-12-2025,35.0,No,7.0,Rack C
+MED3139,Omeprazole,Injection,5.0,415.56,Caremed Pvt Ltd,2027-07-07,21-01-2025,79.0,Yes,184.0,Shelf 2
+MED3198,Omeprazole,Tablet,7.0,479.6,Apollo Meds,2028-10-19,24-01-2025,99.0,No,248.0,Rack A
+MED3251,Paracetamol,Syrup,10.0,79.37,Pharmaplus,2027-02-12,16-02-2025,31.0,Yes,32.0,Shelf 1
+MED3331,Omeprazole,Syrup,19.0,452.7,Healthcare Distributors,2028-02-02,10-05-2025,52.0,Yes,172.0,Rack B
+MED3364,Omeprazole,Capsule,5.0,193.59,Pharmaplus,2026-09-02,30-08-2025,86.0,Yes,12.0,Rack A
+MED3409,Insulin,Injection,17.0,120.17,Pharmaplus,2028-12-26,14-05-2025,13.0,No,180.0,Cold Storage
+MED3453,Ibuprofen,Syrup,13.0,384.74,Pharmaplus,2026-10-01,02-04-2025,12.0,Yes,80.0,Rack A
+MED3493,Cetirizine,Syrup,15.0,32.69,Healthcare Distributors,2029-09-11,02-04-2025,72.0,No,110.0,Rack B
+MED3505,Azithromycin,Capsule,15.0,493.37,Healthcare Distributors,2029-07-31,24-01-2025,44.0,No,100.0,Shelf 2
+MED3550,Metformin,Syrup,7.0,287.14,Wellness Pharma,2027-11-14,29-06-2025,83.0,Yes,17.0,Rack A
+MED3553,Azithromycin,Syrup,10.0,340.65,Apollo Meds,2028-09-05,25-02-2025,81.0,No,41.0,Shelf 1
+MED3570,Azithromycin,Capsule,14.0,146.4,Apollo Meds,2027-01-29,22-04-2025,96.0,Yes,235.0,Shelf 1
+MED3591,Insulin,Tablet,13.0,149.69,Wellness Pharma,2028-12-08,22-06-2025,87.0,Yes,273.0,Cold Storage
+MED3694,Metfromin,Syrup,13.0,81.1,Wellness Pharma,2027-08-09,03-03-2025,75.0,Yes,89.0,Cold Storage
+MED3700,Cetirizine,Injection,5.0,101.15,Medisupply Co.,2027-02-13,24-05-2025,59.0,Yes,12.0,Rack C
+MED3769,Ibuprofen,Capsule,17.0,112.14,Apollo Meds,2029-06-19,17-05-2025,43.0,Yes,169.0,Rack C
+MED3840,Azithromycin,Capsule,13.0,456.86,Healthcare Distributors,2027-08-01,04-12-2025,59.0,No,163.0,Cold Storage
+MED3857,Paracetamol,Syrup,9.0,290.7,Caremed Pvt Ltd,2028-02-19,24-10-2025,96.0,Yes,45.0,Rack A
+MED3858,Metformin,Capsule,8.0,246.19,Apollo Meds,2027-03-20,03-06-2025,91.0,No,52.0,Shelf 1
+MED3940,Ibuprofen,Capsule,5.0,371.5,Pharmaplus,2027-08-23,03-04-2025,41.0,Yes,168.0,Shelf 2
+MED3969,Metfromin,Tablet,8.0,309.37,Apollo Meds,2028-09-19,01-03-2025,16.0,Yes,137.0,Cold Storage
+MED4011,Omeprazole,Tablet,18.0,402.96,Healthcare Distributors,2029-03-06,24-06-2025,55.0,No,47.0,Shelf 2
+MED4033,Ibuprofen,Syrup,11.0,37.72,Medisupply Co.,2027-11-11,08-01-2025,97.0,No,149.0,Rack C
+MED4040,Insulin,Syrup,12.0,448.13,Medisupply Co.,2028-04-20,22-01-2025,72.0,No,266.0,Cold Storage
+MED4072,Azithromycin,Syrup,18.0,252.5,Apollo Meds,2026-12-16,28-11-2025,97.0,No,255.0,Shelf 1
+MED4093,Cetirizine,Capsule,5.0,219.44,Pharmaplus,2026-10-24,02-06-2025,89.0,Yes,183.0,Shelf 1
+MED4134,Paracetamol,Capsule,16.0,357.51,Apollo Meds,2028-03-14,30-03-2025,43.0,No,249.0,Shelf 2
+MED4139,Azithromycin,Capsule,12.0,136.72,Caremed Pvt Ltd,2029-04-27,24-02-2025,49.0,Yes,111.0,Shelf 1
+MED4238,Metfromin,Capsule,5.0,235.94,Wellness Pharma,2028-04-13,28-12-2025,55.0,No,61.0,Shelf 1
+MED4248,Omeprazole,Capsule,16.0,75.19,Pharmaplus,2026-08-07,15-01-2025,96.0,Yes,22.0,Rack B
+MED4291,Dolo 666,Tablet,12.0,184.72,Caremed Pvt Ltd,2027-12-04,17-10-2025,42.0,No,193.0,Shelf 2
+MED4337,Cetirizine,Syrup,10.0,161.92,Medisupply Co.,2029-08-22,19-08-2025,96.0,No,218.0,Cold Storage
+MED4396,Insulin,Injection,9.0,353.99,Pharmaplus,2027-05-20,30-04-2025,34.0,Yes,73.0,Rack C
+MED4434,Paracetamol,Capsule,18.0,296.28,Healthcare Distributors,2028-02-03,03-07-2025,16.0,Yes,246.0,Shelf 1
+MED4456,Insulin,Injection,19.0,306.41,Apollo Meds,2028-03-12,09-04-2025,52.0,Yes,50.0,Cold Storage
+MED4476,Paracetamol,Injection,15.0,179.49,Apollo Meds,2028-08-13,13-12-2025,49.0,No,189.0,Cold Storage
+MED4487,Omeprazole,Syrup,12.0,342.04,Caremed Pvt Ltd,2027-06-08,20-10-2025,46.0,No,92.0,Rack A
+MED4504,Cetirizine,Syrup,15.0,31.32,Caremed Pvt Ltd,2028-07-09,19-02-2025,39.0,Yes,112.0,Shelf 2
+MED4572,Insulin,Syrup,5.0,244.47,Medisupply Co.,2027-03-25,18-09-2025,31.0,Yes,71.0,Rack C
+MED4615,Cetirizine,Syrup,6.0,450.74,Apollo Meds,2027-08-29,25-09-2025,49.0,No,204.0,Shelf 1
+MED4622,Omeprazole,Syrup,18.0,265.77,Medisupply Co.,2026-11-09,19-12-2025,52.0,No,26.0,Shelf 1
+MED4643,Vitamin C,Tablet,15.0,146.94,Wellness Pharma,2026-09-27,26-02-2025,77.0,Yes,264.0,Rack A
+MED4665,Vitamin C,Tablet,10.0,96.6,Pharmaplus,2026-10-16,01-10-2025,67.0,Yes,137.0,Rack B
+MED4684,Paracetamol,Capsule,18.0,484.98,Wellness Pharma,2028-07-12,01-12-2025,78.0,No,261.0,Rack B
+MED4707,Paracetamol,Capsule,7.0,152.41,Pharmaplus,2027-05-03,25-04-2025,35.0,Yes,45.0,Cold Storage
+MED4711,Omeprazole,Injection,12.0,407.11,Medisupply Co.,2027-08-08,03-07-2025,97.0,No,64.0,Rack B
+MED4740,Azithromycin,Capsule,10.0,202.46,Pharmaplus,2028-05-11,20-11-2025,15.0,Yes,280.0,Shelf 1
+MED4769,Insulin,Tablet,15.0,490.78,Wellness Pharma,2026-05-10,10-04-2025,17.0,No,61.0,Cold Storage
+MED4779,Azithromycin,Capsule,18.0,203.39,Medisupply Co.,2028-09-20,13-08-2025,97.0,No,167.0,Cold Storage
+MED4793,Insulin,Syrup,16.0,181.3,Healthcare Distributors,2027-02-16,01-10-2025,17.0,Yes,148.0,Shelf 2
+MED4824,Cetirizine,Syrup,6.0,62.72,Pharmaplus,2028-01-05,01-02-2025,29.0,Yes,57.0,Rack B
+MED4893,Paracetamol,Capsule,6.0,242.92,Medisupply Co.,2027-11-24,19-08-2025,71.0,No,134.0,Rack C
+MED4895,Amoxicillin,Capsule,9.0,158.55,Healthcare Distributors,2028-06-27,09-06-2025,34.0,No,276.0,Cold Storage
+MED4945,Vitamin C,Syrup,13.0,86.01,Pharmaplus,2029-01-16,14-07-2025,16.0,Yes,78.0,Shelf 2
+MED4988,Azithromycin,Capsule,19.0,139.99,Apollo Meds,2026-09-02,17-08-2025,17.0,No,69.0,Rack A
+MED5024,Cetirizine,Capsule,9.0,91.07,Pharmaplus,2028-03-14,31-08-2025,82.0,No,143.0,Shelf 1
+MED5030,Cetirizine,Syrup,16.0,309.3,Pharmaplus,2027-10-03,12-06-2025,36.0,No,68.0,Rack B
+MED5060,Metformin,Tablet,17.0,53.14,Healthcare Distributors,2027-03-20,15-11-2025,35.0,Yes,82.0,Shelf 1
+MED5156,Insulin,Capsule,8.0,283.03,Healthcare Distributors,2028-06-08,11-04-2025,22.0,No,49.0,Shelf 2
+MED5186,Vitamin C,Capsule,16.0,471.72,Medisupply Co.,2028-01-30,07-12-2025,65.0,No,140.0,Rack B
+MED5187,Omeprazole,Injection,8.0,129.94,Healthcare Distributors,2027-12-18,21-05-2025,71.0,No,258.0,Rack B
+MED5227,Insulin,Capsule,18.0,459.79,Apollo Meds,2027-09-07,19-04-2025,50.0,No,154.0,Shelf 2
+MED5273,Cetirizine,Injection,15.0,170.52,Apollo Meds,2028-02-21,02-10-2025,90.0,Yes,164.0,Shelf 1
+MED5344,Omeprazole,Tablet,9.0,326.02,Pharmaplus,2028-07-25,18-07-2025,10.0,No,67.0,Shelf 2
+MED5463,Paracetamol,Tablet,6.0,449.95,Pharmaplus,2029-01-05,27-09-2025,75.0,Yes,208.0,Shelf 2
+MED5472,Insulin,Tablet,12.0,441.48,Wellness Pharma,2028-08-08,22-01-2025,99.0,No,141.0,Rack B
+MED5539,Omeprazole,Injection,9.0,26.97,Pharmaplus,2028-05-20,04-09-2025,61.0,Yes,81.0,Shelf 2
+MED5556,Azithromycin,Capsule,10.0,223.54,Wellness Pharma,2029-09-27,01-03-2025,12.0,Yes,220.0,Rack A
+MED5582,Dolo 670,Tablet,11.0,186.72,Healthcare Distributors,2026-10-08,19-11-2025,66.0,Yes,279.0,Rack A
+MED5613,Metformin,Syrup,9.0,100.14,Medisupply Co.,2028-07-23,21-07-2025,93.0,No,270.0,Cold Storage
+MED5621,Azithromycin,Injection,9.0,205.24,Healthcare Distributors,2027-05-09,14-10-2025,37.0,Yes,276.0,Cold Storage
+MED5707,Paracetamol,Capsule,8.0,223.65,Caremed Pvt Ltd,2027-12-19,31-01-2025,73.0,No,126.0,Rack A
+MED5769,Metfromin,Capsule,14.0,148.3,Caremed Pvt Ltd,2029-03-20,15-12-2025,95.0,Yes,151.0,Rack B
+MED5792,Insulin,Tablet,10.0,79.61,Apollo Meds,2027-08-27,05-01-2025,52.0,Yes,37.0,Rack A
+MED5820,Insulin,Tablet,11.0,360.1,Apollo Meds,2028-10-08,14-03-2025,67.0,Yes,100.0,Shelf 1
+MED5837,Cetirizine,Syrup,17.0,480.44,Apollo Meds,2028-07-22,13-12-2025,63.0,Yes,80.0,Shelf 2
+MED5839,Omeprazole,Injection,16.0,145.69,Healthcare Distributors,2029-12-23,16-10-2025,36.0,Yes,216.0,Shelf 1
+MED5843,Vitamin C,Tablet,6.0,348.4,Apollo Meds,2028-03-16,02-12-2025,99.0,Yes,116.0,Rack A
+MED5881,Vitamin C,Syrup,9.0,338.36,Caremed Pvt Ltd,2028-09-09,15-07-2025,42.0,No,18.0,Shelf 1
+MED5919,Omeprazole,Syrup,13.0,45.54,Apollo Meds,2027-03-08,12-12-2025,13.0,No,261.0,Shelf 2
+MED5936,Azithromycin,Tablet,5.0,203.75,Medisupply Co.,2026-10-26,08-09-2025,10.0,No,120.0,Cold Storage
+MED5980,Paracetamol,Tablet,14.0,396.39,Healthcare Distributors,2027-12-21,29-07-2025,34.0,Yes,73.0,Rack B
+MED5983,Vitamin C,Capsule,6.0,340.97,Wellness Pharma,2029-08-13,29-10-2025,98.0,No,133.0,Shelf 2
+MED5999,Dolo 650,Tablet,16.0,156.9,Medisupply Co.,2027-03-22,01-11-2025,55.0,No,202.0,Shelf 2
+MED6021,Azithromycin,Injection,8.0,49.42,Healthcare Distributors,2027-03-27,12-02-2025,30.0,No,197.0,Cold Storage
+MED6028,Omeprazole,Injection,15.0,69.69,Medisupply Co.,2027-05-21,05-06-2025,99.0,Yes,166.0,Shelf 1
+MED6055,Dolo 672,Injection,7.0,345.6,Caremed Pvt Ltd,2028-02-01,22-04-2025,83.0,Yes,71.0,Rack A
+MED6103,Vitamin C,Tablet,14.0,10.83,Healthcare Distributors,2027-08-25,15-01-2025,27.0,No,161.0,Rack A
+MED6122,Omeprazole,Injection,5.0,495.52,Medisupply Co.,2027-11-09,22-05-2025,47.0,Yes,18.0,Rack A
+MED6131,Ibuprofen,Syrup,12.0,189.81,Wellness Pharma,2027-07-12,25-12-2025,67.0,No,41.0,Shelf 2
+MED6191,Cetirizine,Capsule,7.0,400.6,Healthcare Distributors,2029-04-17,07-09-2025,86.0,Yes,24.0,Rack A
+MED6208,Omeprazole,Tablet,13.0,155.04,Caremed Pvt Ltd,2029-04-26,15-11-2025,67.0,No,181.0,Shelf 1
+MED6358,Ibuprofen,Capsule,5.0,442.82,Pharmaplus,2028-07-27,26-11-2025,17.0,No,62.0,Rack C
+MED6367,Omeprazole,Injection,15.0,398.56,Pharmaplus,2028-09-16,16-09-2025,67.0,No,165.0,Shelf 1
+MED6404,Cetirizine,Syrup,11.0,136.61,Medisupply Co.,2028-09-13,24-12-2025,74.0,Yes,188.0,Shelf 2
+MED6406,Cetirizine,Syrup,16.0,87.91,Healthcare Distributors,2029-01-24,23-09-2025,46.0,No,108.0,Shelf 2
+MED6428,Paracetamol,Injection,17.0,234.06,Pharmaplus,2029-05-23,25-03-2025,55.0,No,291.0,Shelf 2
+MED6503,Vitamin C,Tablet,19.0,69.84,Pharmaplus,2027-06-04,28-09-2025,98.0,Yes,254.0,Cold Storage
+MED6524,Cetirizine,Syrup,9.0,161.65,Caremed Pvt Ltd,2028-12-28,27-08-2025,33.0,No,87.0,Rack C
+MED6526,Vitamin C,Syrup,9.0,120.19,Apollo Meds,2028-02-01,01-07-2025,62.0,No,22.0,Rack A
+MED6633,Metfromin,Syrup,8.0,47.49,Medisupply Co.,2029-04-11,12-05-2025,54.0,Yes,243.0,Rack A
+MED6738,Paracetamol,Capsule,15.0,240.91,Pharmaplus,2028-08-25,27-12-2025,51.0,No,203.0,Rack B
+MED6769,Ibuprofen,Tablet,16.0,121.44,Caremed Pvt Ltd,2027-07-10,08-06-2025,96.0,No,51.0,Rack A
+MED6840,Azithromycin,Syrup,19.0,436.26,Apollo Meds,2028-09-04,03-12-2025,29.0,Yes,41.0,Rack A
+MED6842,Dolo 650,Capsule,14.0,398.79,Apollo Meds,2029-05-12,11-09-2025,76.0,Yes,283.0,Rack A
+MED6922,Ibuprofen,Injection,15.0,89.52,Apollo Meds,2026-12-16,18-10-2025,81.0,Yes,12.0,Cold Storage
+MED6930,Vitamin C,Tablet,11.0,319.79,Medisupply Co.,2027-09-03,06-04-2025,69.0,Yes,296.0,Rack B
+MED6953,Metfromin,Syrup,15.0,335.13,Apollo Meds,2028-11-20,21-08-2025,34.0,Yes,275.0,Rack A
+MED6978,Ibuprofen,Syrup,10.0,163.67,Wellness Pharma,2027-11-27,19-07-2025,98.0,No,158.0,Rack A
+MED6999,Vitamin C,Syrup,16.0,242.6,Healthcare Distributors,2028-09-04,26-02-2025,97.0,No,78.0,Rack C
+MED7003,Vitamin C,Tablet,5.0,282.19,Caremed Pvt Ltd,2027-11-25,10-04-2025,39.0,Yes,252.0,Shelf 2
+MED7017,Cetirizine,Tablet,17.0,192.57,Pharmaplus,2028-06-17,09-01-2025,30.0,Yes,140.0,Shelf 1
+MED7021,Vitamin C,Capsule,16.0,394.65,Apollo Meds,2028-03-13,05-03-2025,62.0,No,192.0,Cold Storage
+MED7036,Azithromycin,Tablet,8.0,89.16,Apollo Meds,2029-08-29,08-06-2025,33.0,No,205.0,Rack A
+MED7110,Vitamin C,Capsule,11.0,313.52,Healthcare Distributors,2026-11-29,24-10-2025,62.0,No,300.0,Rack C
+MED7126,Vitamin C,Syrup,13.0,282.08,Caremed Pvt Ltd,2027-04-20,29-09-2025,36.0,No,257.0,Cold Storage
+MED7193,Insulin,Syrup,9.0,374.78,Wellness Pharma,2027-11-17,13-06-2025,25.0,No,234.0,Rack A
+MED7264,Omeprazole,Capsule,17.0,469.58,Wellness Pharma,2027-02-17,16-10-2025,31.0,Yes,239.0,Rack A
+MED7265,Insulin,Tablet,10.0,248.76,Caremed Pvt Ltd,2027-02-11,18-06-2025,36.0,Yes,23.0,Rack B
+MED7376,Insulin,Injection,18.0,359.06,Wellness Pharma,2027-04-30,05-09-2025,90.0,Yes,71.0,Rack A
+MED7405,Azithromycin,Capsule,18.0,149.85,Caremed Pvt Ltd,2027-05-15,24-12-2025,67.0,Yes,224.0,Rack B
+MED7539,Amoxicillin,Injection,11.0,86.09,Healthcare Distributors,2028-07-17,19-09-2025,38.0,Yes,174.0,Shelf 1
+MED7552,Vitamin C,Tablet,9.0,93.93,Medisupply Co.,2026-07-23,11-12-2025,39.0,No,261.0,Rack C
+MED7559,Vitamin C,Capsule,11.0,160.61,Healthcare Distributors,2027-05-30,21-05-2025,83.0,Yes,250.0,Shelf 1
+MED7589,Metfromin,Syrup,14.0,64.87,Pharmaplus,2027-11-19,20-07-2025,58.0,No,0.0,Rack B
+MED7612,Azithromycin,Capsule,19.0,271.67,Wellness Pharma,2028-12-05,14-04-2025,45.0,Yes,168.0,Rack A
+MED7614,Vitamin C,Capsule,8.0,221.78,Healthcare Distributors,2029-02-17,12-08-2025,96.0,No,272.0,Shelf 1
+MED7654,Vitamin C,Capsule,6.0,458.42,Wellness Pharma,2028-04-19,02-12-2025,36.0,Yes,194.0,Rack A
+MED7677,Vitamin C,Tablet,8.0,145.66,Apollo Meds,2027-07-30,17-08-2025,72.0,Yes,237.0,Rack A
+MED7694,Paracetamol,Syrup,13.0,325.95,Wellness Pharma,2028-12-23,06-05-2025,56.0,No,136.0,Shelf 1
+MED7842,Ibuprofen,Syrup,8.0,208.99,Caremed Pvt Ltd,2027-05-06,27-02-2025,47.0,Yes,54.0,Shelf 1
+MED7865,Insulin,Tablet,8.0,279.76,Wellness Pharma,2029-03-19,06-04-2025,84.0,No,81.0,Rack B
+MED7935,Cetirizine,Capsule,12.0,288.79,Caremed Pvt Ltd,2029-02-23,15-12-2025,27.0,Yes,46.0,Rack B
+MED8020,Paracetamol,Tablet,14.0,447.78,Caremed Pvt Ltd,2028-03-16,08-06-2025,76.0,No,291.0,Rack C
+MED8054,Cetirizine,Capsule,10.0,419.42,Medisupply Co.,2026-06-17,12-03-2025,94.0,Yes,14.0,Shelf 2
+MED8088,Omeprazole,Capsule,10.0,290.52,Wellness Pharma,2029-04-05,25-08-2025,100.0,No,8.0,Rack C
+MED8110,Vitamin C,Capsule,16.0,348.84,Medisupply Co.,2029-03-16,29-01-2025,20.0,Yes,274.0,Shelf 1
+MED8113,Metfromin,Syrup,8.0,33.52,Wellness Pharma,2027-04-19,17-04-2025,71.0,No,104.0,Shelf 1
+MED8142,Ibuprofen,Capsule,12.0,204.02,Healthcare Distributors,2027-06-12,23-01-2025,17.0,Yes,252.0,Shelf 1
+MED8195,Amoxicillin,Capsule,17.0,139.76,Apollo Meds,2028-02-26,24-11-2025,49.0,Yes,11.0,Shelf 2
+MED8210,Vitamin C,Capsule,19.0,226.19,Healthcare Distributors,2026-07-07,23-12-2025,17.0,No,103.0,Rack C
+MED8244,Metfromin,Syrup,15.0,169.61,Apollo Meds,2027-12-01,19-10-2025,14.0,Yes,194.0,Shelf 1
+MED8300,Metfromin,Syrup,15.0,94.18,Medisupply Co.,2028-04-10,23-03-2025,89.0,No,268.0,Rack C
+MED8343,Amoxicillin,Tablet,10.0,125.25,Wellness Pharma,2028-12-12,23-07-2025,43.0,No,28.0,Shelf 2
+MED8400,Cetirizine,Syrup,14.0,139.13,Medisupply Co.,2027-01-02,09-05-2025,12.0,No,107.0,Rack B
+MED8403,Vitamin C,Tablet,6.0,372.85,Wellness Pharma,2027-11-05,01-07-2025,44.0,No,128.0,Rack C
+MED8460,Cetirizine,Syrup,6.0,236.84,Pharmaplus,2027-09-28,08-10-2025,51.0,Yes,218.0,Shelf 1
+MED8512,Azithromycin,Capsule,7.0,195.7,Medisupply Co.,2027-09-13,13-03-2025,86.0,Yes,77.0,Shelf 2
+MED8560,Insulin,Syrup,6.0,58.68,Medisupply Co.,2028-09-21,12-12-2025,23.0,Yes,266.0,Rack A
+MED8584,Paracetamol,Tablet,8.0,232.71,Medisupply Co.,2027-01-18,03-01-2025,20.0,Yes,275.0,Rack B
+MED8618,Dolo 678,Capsule,18.0,71.73,Caremed Pvt Ltd,2028-03-09,02-02-2025,93.0,No,14.0,Shelf 1
+MED8635,Paracetamol,Capsule,18.0,224.05,Apollo Meds,2029-11-26,14-01-2025,41.0,No,12.0,Rack C
+MED8636,Azithromycin,Tablet,19.0,317.96,Apollo Meds,2027-07-28,30-12-2025,14.0,Yes,178.0,Shelf 2
+MED8665,Paracetamol,Tablet,8.0,294.86,Wellness Pharma,2028-12-16,12-11-2025,76.0,Yes,60.0,Shelf 2
+MED8670,Azithromycin,Capsule,6.0,106.98,Pharmaplus,2029-01-28,24-05-2025,31.0,Yes,65.0,Rack A
+MED8676,Paracetamol,Capsule,7.0,217.42,Caremed Pvt Ltd,2028-12-29,06-10-2025,76.0,No,208.0,Shelf 2
+MED8759,Vitamin C,Capsule,9.0,185.58,Pharmaplus,2028-01-31,07-02-2025,78.0,Yes,71.0,Shelf 1
+MED8777,Azithromycin,Capsule,15.0,139.02,Healthcare Distributors,2029-04-01,28-03-2025,87.0,No,18.0,Rack A
+MED8796,Ibuprofen,Injection,18.0,314.24,Medisupply Co.,2027-08-25,11-12-2025,61.0,No,8.0,Rack A
+MED8807,Paracetamol,Capsule,8.0,180.88,Caremed Pvt Ltd,2028-02-07,10-08-2025,57.0,Yes,246.0,Rack B
+MED8813,Ibuprofen,Syrup,8.0,148.29,Pharmaplus,2027-10-10,15-07-2025,73.0,Yes,91.0,Cold Storage
+MED8815,Cetirizine,Capsule,5.0,201.49,Pharmaplus,2027-08-15,12-12-2025,33.0,No,271.0,Rack C
+MED8818,Paracetamol,Syrup,18.0,74.91,Apollo Meds,2027-02-16,01-11-2025,33.0,Yes,108.0,Cold Storage
+MED8833,Ibuprofen,Syrup,16.0,155.57,Pharmaplus,2028-08-20,10-07-2025,13.0,Yes,251.0,Shelf 2
+MED8843,Vitamin C,Injection,13.0,431.91,Medisupply Co.,2028-08-01,19-08-2025,97.0,No,297.0,Cold Storage
+MED8881,Vitamin C,Capsule,16.0,225.43,Wellness Pharma,2026-08-26,07-12-2025,56.0,Yes,72.0,Rack B
+MED8889,Ibuprofen,Tablet,9.0,499.11,Healthcare Distributors,2029-07-29,10-05-2025,26.0,Yes,229.0,Cold Storage
+MED8895,Omeprazole,Capsule,9.0,76.92,Apollo Meds,2026-05-22,22-02-2025,70.0,Yes,31.0,Shelf 1
+MED8938,Insulin,Tablet,17.0,137.06,Healthcare Distributors,2027-06-25,05-06-2025,33.0,Yes,25.0,Shelf 1
+MED8976,Paracetamol,Injection,7.0,295.97,Pharmaplus,2028-08-04,02-03-2025,90.0,No,4.0,Shelf 1
+MED8992,Metformin,Tablet,14.0,120.87,Pharmaplus,2027-11-07,08-06-2025,79.0,Yes,296.0,Cold Storage
+MED8999,Dolo 650,Syrup,6.0,34.6,Pharmaplus,2026-05-16,06-11-2025,62.0,Yes,110.0,Shelf 1
+MED9006,Cetirizine,Tablet,9.0,241.01,Wellness Pharma,2026-11-16,11-07-2025,61.0,No,75.0,Rack A
+MED9130,Amoxicillin,Syrup,19.0,98.7,Caremed Pvt Ltd,2028-04-16,18-02-2025,31.0,Yes,116.0,Rack B
+MED9168,Azithromycin,Tablet,18.0,117.88,Pharmaplus,2029-02-20,23-01-2025,25.0,No,89.0,Cold Storage
+MED9186,Amoxicillin,Capsule,13.0,491.27,Wellness Pharma,2027-12-11,04-06-2025,67.0,No,165.0,Rack C
+MED9224,Cetirizine,Syrup,15.0,183.18,Pharmaplus,2029-08-18,20-07-2025,38.0,Yes,120.0,Rack C
+MED9268,Amoxicillin,Capsule,7.0,466.47,Wellness Pharma,2027-12-29,31-05-2025,31.0,Yes,270.0,Shelf 1
+MED9271,Omeprazole,Tablet,9.0,317.85,Healthcare Distributors,2027-08-17,08-10-2025,15.0,No,177.0,Rack A
+MED9280,Paracetamol,Syrup,6.0,255.36,Pharmaplus,2027-06-05,07-10-2025,40.0,Yes,44.0,Shelf 2
+MED9284,Cetirizine,Tablet,19.0,166.8,Healthcare Distributors,2026-10-29,24-07-2025,13.0,No,140.0,Rack C
+MED9285,Azithromycin,Syrup,15.0,433.16,Healthcare Distributors,2027-03-31,28-04-2025,26.0,No,92.0,Shelf 1
+MED9287,Omeprazole,Syrup,15.0,302.12,Caremed Pvt Ltd,2027-10-18,06-05-2025,22.0,No,218.0,Rack C
+MED9326,Cetirizine,Syrup,10.0,341.42,Pharmaplus,2026-12-08,17-09-2025,85.0,Yes,101.0,Shelf 1
+MED9365,Insulin,Tablet,19.0,158.92,Pharmaplus,2028-02-02,24-03-2025,90.0,No,66.0,Shelf 2
+MED9382,Cetirizine,Injection,7.0,289.78,Medisupply Co.,2028-08-04,10-08-2025,21.0,No,236.0,Rack A
+MED9391,Dolo 683,Capsule,13.0,289.2,Wellness Pharma,2027-07-18,17-04-2025,52.0,No,97.0,Rack B
+MED9412,Azithromycin,Capsule,9.0,52.22,Wellness Pharma,2028-01-16,21-11-2025,29.0,No,133.0,Rack B
+MED9444,Metfromin,Syrup,14.0,413.85,Pharmaplus,2028-02-03,06-08-2025,75.0,Yes,41.0,Shelf 2
+MED9446,Dolo 683,Tablet,15.0,447.72,Pharmaplus,2026-10-05,26-04-2025,61.0,No,169.0,Rack B
+MED9471,Cetirizine,Syrup,6.0,204.07,Medisupply Co.,2026-06-24,03-06-2025,49.0,Yes,252.0,Shelf 2
+MED9509,Insulin,Injection,14.0,457.48,Wellness Pharma,2028-08-14,05-12-2025,12.0,Yes,142.0,Shelf 1
+MED9667,Omeprazole,Syrup,15.0,287.53,Healthcare Distributors,2028-08-27,12-02-2025,11.0,No,65.0,Cold Storage
+MED9707,Paracetamol,Capsule,11.0,83.97,Pharmaplus,2027-05-21,24-02-2025,61.0,Yes,206.0,Shelf 1
+MED9884,Cetirizine,Capsule,18.0,139.93,Pharmaplus,2026-04-01,23-11-2025,63.0,No,153.0,Shelf 1
+MED9923,Vitamin C,Syrup,7.0,433.32,Medisupply Co.,2029-03-14,13-02-2025,75.0,No,293.0,Shelf 1
+MED9972,Insulin,Tablet,8.0,251.11,Wellness Pharma,2029-10-19,23-02-2025,18.0,No,74.0,Rack B
+,,,0.0,,Unknown,,,,,,
