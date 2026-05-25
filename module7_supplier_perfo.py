@@ -1,147 +1,305 @@
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+# ======================================================
+# MAIN FUNCTION
+# ======================================================
 
-print(df.head())
+def main():
 
-print(df.isnull().sum())
+    st.header("Supplier Performance Analytics")
 
-df.drop_duplicates(inplace=True)
+    # ======================================================
+    # LOAD DATA
+    # ======================================================
 
-df['Total_Value'] = df['Stock_Quantity'] * df['Price_per_unit']
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
 
-supplier_medicine_count = df.groupby('Supplier_Name')['Medicine_Name'].count()
+    # ======================================================
+    # DATA PREVIEW
+    # ======================================================
 
-print("\nSUPPLIER MEDICINE COUNT")
-print(supplier_medicine_count)
+    st.subheader("Dataset Preview")
 
-supplier_stock = df.groupby('Supplier_Name')['Stock_Quantity'].sum()
+    st.dataframe(df.head())
 
-print("\nSUPPLIER STOCK QUANTITY")
-print(supplier_stock)
+    # ======================================================
+    # MISSING VALUES
+    # ======================================================
 
-supplier_sales = df.groupby('Supplier_Name')['Units_Sold'].sum()
+    st.subheader("Missing Values")
 
-print("\nSUPPLIER SALES PERFORMANCE")
-print(supplier_sales)
+    st.write(df.isnull().sum())
 
-supplier_value = df.groupby('Supplier_Name')['Total_Value'].sum()
+    # ======================================================
+    # REMOVE DUPLICATES
+    # ======================================================
 
-print("\nSUPPLIER INVENTORY VALUE")
-print(supplier_value)
+    df.drop_duplicates(inplace=True)
 
-avg_price = df.groupby('Supplier_Name')['Price_per_unit'].mean()
+    # ======================================================
+    # TOTAL VALUE
+    # ======================================================
 
-print("\nAVERAGE PRICE PER SUPPLIER")
-print(avg_price)
+    df['Total_Value'] = (
+        df['Stock_Quantity'] * df['Price_per_unit']
+    )
 
-supplier_efficiency = (
-    df.groupby('Supplier_Name')['Units_Sold'].sum()
-    /
-    df.groupby('Supplier_Name')['Stock_Quantity'].sum()
-)
+    # ======================================================
+    # SUPPLIER MEDICINE COUNT
+    # ======================================================
 
-print("\nSUPPLIER EFFICIENCY SCORE")
-print(supplier_efficiency)
+    supplier_medicine_count = (
+        df.groupby('Supplier_Name')['Medicine_Name']
+        .count()
+    )
 
-low_stock = df[df['Stock_Quantity'] <= df['Reorder_Level']]
+    st.subheader("Supplier Medicine Count")
 
-print("\nLOW STOCK MEDICINES")
-print(low_stock[['Medicine_Name',
-                 'Supplier_Name',
-                 'Stock_Quantity',
-                 'Reorder_Level']])
+    st.dataframe(supplier_medicine_count)
 
-supplier_report = df.groupby('Supplier_Name').agg({
-    'Medicine_Name': 'count',
-    'Stock_Quantity': 'sum',
-    'Units_Sold': 'sum',
-    'Price_per_unit': 'mean',
-    'Total_Value': 'sum'
-})
+    # ======================================================
+    # SUPPLIER STOCK
+    # ======================================================
 
-supplier_report.columns = [
-    'Medicine_Count',
-    'Total_Stock',
-    'Units_Sold',
-    'Average_Price',
-    'Inventory_Value'
-]
+    supplier_stock = (
+        df.groupby('Supplier_Name')['Stock_Quantity']
+        .sum()
+    )
 
-print("\nCOMPLETE SUPPLIER REPORT")
-print(supplier_report)
+    st.subheader("Supplier Stock Quantity")
 
-supplier_report.to_csv("supplier_performance_report.csv")
+    st.dataframe(supplier_stock)
 
-plt.figure(figsize=(10,6))
+    # ======================================================
+    # SUPPLIER SALES
+    # ======================================================
 
-supplier_stock.plot(kind='bar')
+    supplier_sales = (
+        df.groupby('Supplier_Name')['Units_Sold']
+        .sum()
+    )
 
-plt.title("Supplier Stock Contribution")
-plt.xlabel("Supplier Name")
-plt.ylabel("Stock Quantity")
+    st.subheader("Supplier Sales Performance")
 
-plt.xticks(rotation=45)
+    st.dataframe(supplier_sales)
 
-plt.tight_layout()
-plt.show()
+    # ======================================================
+    # SUPPLIER INVENTORY VALUE
+    # ======================================================
 
-plt.figure(figsize=(10,6))
+    supplier_value = (
+        df.groupby('Supplier_Name')['Total_Value']
+        .sum()
+    )
 
-supplier_sales.plot(kind='bar')
+    st.subheader("Supplier Inventory Value")
 
-plt.title("Supplier Sales Performance")
-plt.xlabel("Supplier Name")
-plt.ylabel("Units Sold")
+    st.dataframe(supplier_value)
 
-plt.xticks(rotation=45)
+    # ======================================================
+    # AVERAGE PRICE
+    # ======================================================
 
-plt.tight_layout()
-plt.show()
+    avg_price = (
+        df.groupby('Supplier_Name')['Price_per_unit']
+        .mean()
+    )
 
-plt.figure(figsize=(8,8))
+    st.subheader("Average Price Per Supplier")
 
-supplier_value.plot(
-    kind='pie',
-    autopct='%1.1f%%'
-)
+    st.dataframe(avg_price)
 
-plt.title("Supplier Inventory Value Share")
-plt.ylabel("")
+    # ======================================================
+    # SUPPLIER EFFICIENCY
+    # ======================================================
 
-plt.show()
+    supplier_efficiency = (
+        df.groupby('Supplier_Name')['Units_Sold'].sum()
+        /
+        df.groupby('Supplier_Name')['Stock_Quantity'].sum()
+    )
 
-plt.figure(figsize=(10,6))
+    st.subheader("Supplier Efficiency Score")
 
-supplier_efficiency.plot(kind='bar')
+    st.dataframe(supplier_efficiency)
 
-plt.title("Supplier Efficiency Score")
-plt.xlabel("Supplier Name")
-plt.ylabel("Efficiency Score")
+    # ======================================================
+    # LOW STOCK MEDICINES
+    # ======================================================
 
-plt.xticks(rotation=45)
+    low_stock = df[
+        df['Stock_Quantity'] <= df['Reorder_Level']
+    ]
 
-plt.tight_layout()
-plt.show()
+    st.subheader("Low Stock Medicines")
 
-print("\nFINAL INSIGHTS")
+    st.dataframe(
+        low_stock[
+            [
+                'Medicine_Name',
+                'Supplier_Name',
+                'Stock_Quantity',
+                'Reorder_Level'
+            ]
+        ]
+    )
 
-best_sales_supplier = supplier_sales.idxmax()
+    # ======================================================
+    # COMPLETE SUPPLIER REPORT
+    # ======================================================
 
-print(f"Best Supplier by Sales: {best_sales_supplier}")
+    supplier_report = df.groupby('Supplier_Name').agg({
+        'Medicine_Name': 'count',
+        'Stock_Quantity': 'sum',
+        'Units_Sold': 'sum',
+        'Price_per_unit': 'mean',
+        'Total_Value': 'sum'
+    })
 
-highest_stock_supplier = supplier_stock.idxmax()
+    supplier_report.columns = [
+        'Medicine_Count',
+        'Total_Stock',
+        'Units_Sold',
+        'Average_Price',
+        'Inventory_Value'
+    ]
 
-print(f"Highest Stock Supplier: {highest_stock_supplier}")
+    st.subheader("Complete Supplier Report")
 
-expensive_supplier = avg_price.idxmax()
+    st.dataframe(supplier_report)
 
-print(f"Most Expensive Supplier: {expensive_supplier}")
+    # SAVE REPORT
+    supplier_report.to_csv(
+        "supplier_performance_report.csv"
+    )
 
-best_efficiency_supplier = supplier_efficiency.idxmax()
+    # ======================================================
+    # GRAPH 1
+    # ======================================================
 
-print(f"Best Efficiency Supplier: {best_efficiency_supplier}")
+    st.subheader("Supplier Stock Contribution")
 
-print("\nMODULE 7 – SUPPLIER PERFORMANCE ANALYTICS COMPLETED SUCCESSFULLY")
-df.to_csv('supplier_performance_data.csv', index=False)
+    fig1, ax1 = plt.subplots(figsize=(10,6))
+
+    supplier_stock.plot(
+        kind='bar',
+        ax=ax1
+    )
+
+    ax1.set_title("Supplier Stock Contribution")
+
+    ax1.set_xlabel("Supplier Name")
+
+    ax1.set_ylabel("Stock Quantity")
+
+    plt.xticks(rotation=45)
+
+    st.pyplot(fig1)
+
+    # ======================================================
+    # GRAPH 2
+    # ======================================================
+
+    st.subheader("Supplier Sales Performance")
+
+    fig2, ax2 = plt.subplots(figsize=(10,6))
+
+    supplier_sales.plot(
+        kind='bar',
+        ax=ax2
+    )
+
+    ax2.set_title("Supplier Sales Performance")
+
+    ax2.set_xlabel("Supplier Name")
+
+    ax2.set_ylabel("Units Sold")
+
+    plt.xticks(rotation=45)
+
+    st.pyplot(fig2)
+
+    # ======================================================
+    # GRAPH 3
+    # ======================================================
+
+    st.subheader("Supplier Inventory Value Share")
+
+    fig3, ax3 = plt.subplots(figsize=(8,8))
+
+    supplier_value.plot(
+        kind='pie',
+        autopct='%1.1f%%',
+        ax=ax3
+    )
+
+    ax3.set_title("Supplier Inventory Value Share")
+
+    ax3.set_ylabel("")
+
+    st.pyplot(fig3)
+
+    # ======================================================
+    # GRAPH 4
+    # ======================================================
+
+    st.subheader("Supplier Efficiency Score")
+
+    fig4, ax4 = plt.subplots(figsize=(10,6))
+
+    supplier_efficiency.plot(
+        kind='bar',
+        ax=ax4
+    )
+
+    ax4.set_title("Supplier Efficiency Score")
+
+    ax4.set_xlabel("Supplier Name")
+
+    ax4.set_ylabel("Efficiency Score")
+
+    plt.xticks(rotation=45)
+
+    st.pyplot(fig4)
+
+    # ======================================================
+    # FINAL INSIGHTS
+    # ======================================================
+
+    st.subheader("Final Insights")
+
+    best_sales_supplier = supplier_sales.idxmax()
+
+    st.success(
+        f"Best Supplier by Sales: {best_sales_supplier}"
+    )
+
+    highest_stock_supplier = supplier_stock.idxmax()
+
+    st.info(
+        f"Highest Stock Supplier: {highest_stock_supplier}"
+    )
+
+    expensive_supplier = avg_price.idxmax()
+
+    st.warning(
+        f"Most Expensive Supplier: {expensive_supplier}"
+    )
+
+    best_efficiency_supplier = supplier_efficiency.idxmax()
+
+    st.success(
+        f"Best Efficiency Supplier: {best_efficiency_supplier}"
+    )
+
+    st.success(
+        "MODULE 7 – SUPPLIER PERFORMANCE ANALYTICS COMPLETED SUCCESSFULLY"
+    )
+
+    # SAVE FINAL DATA
+    df.to_csv(
+        'supplier_performance_data.csv',
+        index=False
+    )
