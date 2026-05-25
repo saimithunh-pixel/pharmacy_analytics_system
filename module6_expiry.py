@@ -32,45 +32,145 @@ df['Status'] = df['days_to_expiry'].apply(expiry_status)
 # Display result
 print(df.head())
 df.to_csv('expired_medicine_report.csv', index=False)"""
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+# ======================================================
+# MAIN FUNCTION
+# ======================================================
 
-current_date = pd.Timestamp.today()
+def main():
 
-df['Expiry_Date'] = pd.to_datetime(df['Expiry_Date'])
+    st.header("Expiry Monitoring System")
 
-df['days_to_expiry'] = (
-    df['Expiry_Date'] - current_date
-).dt.days
+    # ======================================================
+    # LOAD DATA
+    # ======================================================
 
-def expiry_status(days):
-    if days < 0:
-        return "Expired"
-    elif days <= 30:
-        return "Critical"
-    elif days <= 90:
-        return "Warning"
-    else:
-        return "Safe"
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
 
-df['Status'] = df['days_to_expiry'].apply(expiry_status)
+    # ======================================================
+    # CURRENT DATE
+    # ======================================================
 
-print(df.head())
+    current_date = pd.Timestamp.today()
 
-df.to_csv('expired_medicine_report.csv', index=False)
+    # ======================================================
+    # CONVERT EXPIRY DATE
+    # ======================================================
 
-status_count = df['Status'].value_counts()
+    df['Expiry_Date'] = pd.to_datetime(
+        df['Expiry_Date']
+    )
 
-plt.figure(figsize=(8,8))
+    # ======================================================
+    # DAYS TO EXPIRY
+    # ======================================================
 
-status_count.plot(
-    kind='pie',
-    autopct='%1.1f%%'
-)
+    df['days_to_expiry'] = (
+        df['Expiry_Date'] - current_date
+    ).dt.days
 
-plt.title("Medicine Expiry Status Distribution")
-plt.ylabel("")
+    # ======================================================
+    # EXPIRY STATUS FUNCTION
+    # ======================================================
 
-plt.show()
+    def expiry_status(days):
+
+        if days < 0:
+            return "Expired"
+
+        elif days <= 30:
+            return "Critical"
+
+        elif days <= 90:
+            return "Warning"
+
+        else:
+            return "Safe"
+
+    # ======================================================
+    # APPLY STATUS
+    # ======================================================
+
+    df['Status'] = df['days_to_expiry'].apply(
+        expiry_status
+    )
+
+    # ======================================================
+    # DATA PREVIEW
+    # ======================================================
+
+    st.subheader("Expiry Monitoring Dataset")
+
+    st.dataframe(df.head())
+
+    # ======================================================
+    # SAVE REPORT
+    # ======================================================
+
+    df.to_csv(
+        'expired_medicine_report.csv',
+        index=False
+    )
+
+    # ======================================================
+    # STATUS COUNT
+    # ======================================================
+
+    status_count = df['Status'].value_counts()
+
+    st.subheader("Medicine Expiry Status Count")
+
+    st.dataframe(status_count)
+
+    # ======================================================
+    # PIE CHART
+    # ======================================================
+
+    st.subheader(
+        "Medicine Expiry Status Distribution"
+    )
+
+    fig, ax = plt.subplots(figsize=(8,8))
+
+    status_count.plot(
+        kind='pie',
+        autopct='%1.1f%%',
+        ax=ax
+    )
+
+    ax.set_title(
+        "Medicine Expiry Status Distribution"
+    )
+
+    ax.set_ylabel("")
+
+    st.pyplot(fig)
+
+    # ======================================================
+    # FINAL INSIGHTS
+    # ======================================================
+
+    st.subheader("Final Insights")
+
+    expired_count = (
+        df['Status'] == 'Expired'
+    ).sum()
+
+    critical_count = (
+        df['Status'] == 'Critical'
+    ).sum()
+
+    st.error(
+        f"Expired Medicines: {expired_count}"
+    )
+
+    st.warning(
+        f"Critical Medicines: {critical_count}"
+    )
+
+    st.success(
+        "Expiry Monitoring Completed Successfully"
+    )
