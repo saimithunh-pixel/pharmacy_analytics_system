@@ -1,119 +1,139 @@
 import streamlit as st
 
+# IMPORT MODULE FILES
+
+import module5_stock_analysis
+import module6_expiry
+import module7_supplier_perfo
+import module8_prescription_analy
+import module9_inventory_optimiz_engine
+import module10_demand_forecasting
+import module14_api_develop
+import module15_testing_validation
+
+# ======================================================
+# PAGE CONFIG
+# ======================================================
+
 st.set_page_config(
     page_title="Pharmacy Analytics System",
     layout="wide"
 )
 
-st.title("Pharmacy Analytics System")
+# ======================================================
+# TITLE
+# ======================================================
+
+st.markdown("""
+<h1 style='text-align:center;
+color:white;
+background-color:#1565C0;
+padding:15px;
+border-radius:10px;'>
+Pharmacy Analytics System
+</h1>
+""", unsafe_allow_html=True)
+
+# ======================================================
+# SIDEBAR
+# ======================================================
 
 page = st.sidebar.radio(
     "Navigation",
     [
         "Home",
-        "KPI Dashboard",
         "Medicine Stock Analysis",
         "Expiry Monitoring",
         "Supplier Analytics",
         "Prescription Trends",
         "Inventory Optimization",
         "Demand Forecasting",
-        "SQL Reports",
         "API Development",
         "Testing & Validation"
     ]
 )
 
-# HOME
+# ======================================================
+# HOME PAGE
+# ======================================================
+
 if page == "Home":
 
     st.header("Project Overview")
 
     st.write("""
     This Pharmacy Analytics System helps monitor:
-    - Medicine inventory
-    - Expiry tracking
-    - Supplier performance
-    - Demand forecasting
-    - Prescription trends
-    - KPI reporting
+
+    ✔ Medicine inventory  
+    ✔ Expiry tracking  
+    ✔ Supplier performance  
+    ✔ Demand forecasting  
+    ✔ Prescription trends  
+    ✔ KPI reporting  
+    ✔ API integration  
+    ✔ Testing & validation
     """)
 
-# KPI DASHBOARD
-elif page == "KPI Dashboard":
-
-    st.header("KPI Dashboard")
-
-    st.write("Add your KPI dashboard charts here.")
-
+# ======================================================
 # STOCK ANALYSIS
+# ======================================================
+
 elif page == "Medicine Stock Analysis":
 
-    st.header("Medicine Stock Analysis")
+    module5_stock_analysis.main()
 
-    st.write("Add stock analysis graphs here.")
+# ======================================================
+# EXPIRY MONITORING
+# ======================================================
 
-# EXPIRY
 elif page == "Expiry Monitoring":
 
-    st.header("Expiry Monitoring System")
+    module6_expiry.main()
 
-    st.write("Add expiry monitoring charts here.")
+# ======================================================
+# SUPPLIER ANALYTICS
+# ======================================================
 
-# SUPPLIER
 elif page == "Supplier Analytics":
 
-    st.header("Supplier Performance Analytics")
+    module7_supplier_perfo.main()
 
-    st.write("Add supplier analytics here.")
+# ======================================================
+# PRESCRIPTION TRENDS
+# ======================================================
 
-# PRESCRIPTION
 elif page == "Prescription Trends":
 
-    st.header("Prescription Trend Analysis")
+    module8_prescription_analy.main()
 
-    st.write("Add prescription trend charts here.")
+# ======================================================
+# INVENTORY OPTIMIZATION
+# ======================================================
 
-# INVENTORY
 elif page == "Inventory Optimization":
 
-    st.header("Inventory Optimization Engine")
+    module9_inventory_optimiz_engine.main()
 
-    st.write("Add optimization analysis here.")
+# ======================================================
+# DEMAND FORECASTING
+# ======================================================
 
-# FORECASTING
 elif page == "Demand Forecasting":
 
-    st.header("Demand Forecasting")
+    module10_demand_forecasting.main()
 
-    st.write("Add forecasting charts here.")
+# ======================================================
+# API DEVELOPMENT
+# ======================================================
 
-# SQL
-elif page == "SQL Reports":
-
-    st.header("SQL Reporting & Analytics")
-
-    st.write("Add SQL outputs here.")
-
-# API
 elif page == "API Development":
 
-    st.header("API Development")
+    module14_api_develop.main()
 
-    st.code("""
-@app.route('/inventory')
-def inventory():
-    return "Inventory Data"
-""")
-
+# ======================================================
 # TESTING
+# ======================================================
+
 elif page == "Testing & Validation":
 
-    st.header("Testing & Validation")
-
-    st.write("""
-    Testing performed:
-    - Forecast validation
-    - Inventory validation
-    - Supplier metrics testing
-    """)
+    module15_testing_validation.main()

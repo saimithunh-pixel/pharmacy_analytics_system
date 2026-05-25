@@ -1,4 +1,4 @@
-import pandas as pd
+"""import pandas as pd
 from prophet import Prophet
 import matplotlib.pyplot as plt
 
@@ -105,7 +105,7 @@ plt.savefig(
 
 # Show chart
 plt.show()
-"""
+
 import pandas as pd
 from prophet import Prophet
 import matplotlib.pyplot as plt
@@ -219,3 +219,116 @@ plt.savefig(
 
 # Show graph
 plt.show()"""
+import pandas as pd
+from prophet import Prophet
+import matplotlib.pyplot as plt
+import streamlit as st  # Added for rendering in Streamlit
+
+def main():
+    st.header("Medicine Demand Forecasting")
+    st.write("Generating demand forecasts for key medicines...")
+
+    # Load dataset
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+
+    # Convert Purchase_Date to datetime
+    df['Purchase_Date'] = pd.to_datetime(
+        df['Purchase_Date'],
+        dayfirst=True,
+        errors='coerce'
+    )
+
+    # Remove invalid dates
+    df = df.dropna(subset=['Purchase_Date'])
+
+    # Select medicines you want
+    medicine_list = [
+        'Paracetamol',
+        'Dolo650',
+        'Vitamin C',
+        'Azithromycin',
+        'Cetirizine',
+        'Amoxicillin',
+        'Ibuprofen',
+        'Metformin',
+        'Aspirin',
+        'Omeprazole'
+    ]
+
+    # Create big figure and capture the fig object explicitly
+    fig, ax = plt.subplots(figsize=(16, 8))
+
+    # Loop through medicines
+    for medicine in medicine_list:
+
+        # Filter medicine data
+        medicine_df = df[df['Medicine_Name'] == medicine]
+
+        # Skip if medicine not found
+        if medicine_df.empty:
+            print(f"{medicine} not found in dataset")
+            continue
+
+        # Group by date
+        forecast_df = medicine_df.groupby('Purchase_Date')['Units_Sold'].sum().reset_index()
+
+        # Rename columns for Prophet
+        forecast_df.columns = ['ds', 'y']
+
+        # Sort values
+        forecast_df = forecast_df.sort_values('ds')
+
+        # Skip if very few rows
+        if len(forecast_df) < 2:
+            continue
+
+        # Create and train model
+        model = Prophet(
+            daily_seasonality=True,
+            yearly_seasonality=True
+        )
+
+        model.fit(forecast_df)
+
+        # Create future dates
+        future = model.make_future_dataframe(periods=30)
+
+        # Predict
+        forecast = model.predict(future)
+
+        # Plot forecast line only using the ax object
+        ax.plot(
+            forecast['ds'],
+            forecast['yhat'],
+            linewidth=2,
+            label=medicine
+        )
+
+    # Graph settings using ax object
+    ax.set_title(
+        "Medicine Demand Forecast for Multiple Medicines",
+        fontsize=18,
+        fontweight='bold'
+    )
+
+    ax.set_xlabel("Date", fontsize=12)
+    ax.set_ylabel("Predicted Units Sold", fontsize=12)
+
+    plt.xticks(rotation=45)
+    ax.grid(True)
+    ax.legend()
+    plt.tight_layout()
+
+    # Save chart
+    plt.savefig(
+        "multi_medicine_forecast.png",
+        dpi=300,
+        bbox_inches='tight'
+    )
+
+    # Display the chart directly inside the Streamlit Web UI
+    st.pyplot(fig)
+
+# This allows you to still test the file individually if needed
+if __name__ == "__main__":
+    main()
