@@ -1,7 +1,7 @@
 import streamlit as st
 
 # IMPORT MODULE FILES
-
+import dashboard11  # <-- STEP 3: Added KPI Dashboard import
 import module5_stock_analysis
 import module6_expiry
 import module7_supplier_perfo
@@ -42,6 +42,7 @@ page = st.sidebar.radio(
     "Navigation",
     [
         "Home",
+        "KPI Dashboard",  # <-- STEP 3: Added to sidebar choices
         "Medicine Stock Analysis",
         "Expiry Monitoring",
         "Supplier Analytics",
@@ -73,6 +74,14 @@ if page == "Home":
     ✔ API integration  
     ✔ Testing & validation
     """)
+
+# ======================================================
+# KPI DASHBOARD  <-- STEP 4: Added section above Stock Analysis
+# ======================================================
+
+elif page == "KPI Dashboard":
+
+    dashboard11.main()
 
 # ======================================================
 # STOCK ANALYSIS
