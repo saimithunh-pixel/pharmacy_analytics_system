@@ -1,4 +1,4 @@
-﻿streamlit
+streamlit
 pandas
 matplotlib
 numpy
@@ -6,3 +6,4 @@ scikit-learn
 squarify
 prophet
 flask
+plotly

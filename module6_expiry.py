@@ -60,33 +60,25 @@ def main():
     # CONVERT EXPIRY DATE
     # ======================================================
 
-    df['Expiry_Date'] = pd.to_datetime(
-        df['Expiry_Date']
-    )
+    df['Expiry_Date'] = pd.to_datetime(df['Expiry_Date'])
 
     # ======================================================
     # DAYS TO EXPIRY
     # ======================================================
 
-    df['days_to_expiry'] = (
-        df['Expiry_Date'] - current_date
-    ).dt.days
+    df['days_to_expiry'] = (df['Expiry_Date'] - current_date).dt.days
 
     # ======================================================
     # EXPIRY STATUS FUNCTION
     # ======================================================
 
     def expiry_status(days):
-
         if days < 0:
             return "Expired"
-
         elif days <= 30:
             return "Critical"
-
         elif days <= 90:
             return "Warning"
-
         else:
             return "Safe"
 
@@ -94,26 +86,20 @@ def main():
     # APPLY STATUS
     # ======================================================
 
-    df['Status'] = df['days_to_expiry'].apply(
-        expiry_status
-    )
+    df['Status'] = df['days_to_expiry'].apply(expiry_status)
 
     # ======================================================
     # DATA PREVIEW
     # ======================================================
 
     st.subheader("Expiry Monitoring Dataset")
-
     st.dataframe(df.head())
 
     # ======================================================
     # SAVE REPORT
     # ======================================================
 
-    df.to_csv(
-        'expired_medicine_report.csv',
-        index=False
-    )
+    df.to_csv('expired_medicine_report.csv', index=False)
 
     # ======================================================
     # STATUS COUNT
@@ -122,29 +108,17 @@ def main():
     status_count = df['Status'].value_counts()
 
     st.subheader("Medicine Expiry Status Count")
-
     st.dataframe(status_count)
 
     # ======================================================
     # PIE CHART
     # ======================================================
 
-    st.subheader(
-        "Medicine Expiry Status Distribution"
-    )
+    st.subheader("Medicine Expiry Status Distribution")
 
-    fig, ax = plt.subplots(figsize=(8,8))
-
-    status_count.plot(
-        kind='pie',
-        autopct='%1.1f%%',
-        ax=ax
-    )
-
-    ax.set_title(
-        "Medicine Expiry Status Distribution"
-    )
-
+    fig, ax = plt.subplots(figsize=(8, 8))
+    status_count.plot(kind='pie', autopct='%1.1f%%', ax=ax)
+    ax.set_title("Medicine Expiry Status Distribution")
     ax.set_ylabel("")
 
     st.pyplot(fig)
@@ -155,26 +129,13 @@ def main():
 
     st.subheader("Final Insights")
 
-    expired_count = (
-        df['Status'] == 'Expired'
-    ).sum()
+    expired_count = (df['Status'] == 'Expired').sum()
+    critical_count = (df['Status'] == 'Critical').sum()
 
-    critical_count = (
-        df['Status'] == 'Critical'
-    ).sum()
+    st.error(f"Expired Medicines: {expired_count}")
+    st.warning(f"Critical Medicines: {critical_count}")
+    st.success("Expiry Monitoring Completed Successfully")
 
-    st.error(
-        f"Expired Medicines: {expired_count}"
-    )
 
-    st.warning(
-        f"Critical Medicines: {critical_count}"
-    )
-
-    st.success(
-        "Expiry Monitoring Completed Successfully"
-<<<<<<< HEAD
-    )
-=======
-    )
->>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9
+if __name__ == "__main__":
+    main()

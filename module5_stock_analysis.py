@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """import pandas as pd          #import libraries     
 =======
 import pandas as pd
@@ -59,14 +59,19 @@ def main():
 
     st.header("Medicine Stock Analysis")
 
+    # ======================================================
     # LOAD DATASET
+    # ======================================================
+
     df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
 
+    # ======================================================
     # SHOW DATA
+    # ======================================================
+
     st.subheader("Dataset Preview")
     st.dataframe(df.head())
 
-    # CHECK COLUMN NAMES
     st.subheader("Column Names")
     st.write(df.columns)
 
@@ -75,24 +80,16 @@ def main():
     # ======================================================
 
     low_stock = df[df['Stock_Quantity'] < 20]
-
     overstock = df[df['Stock_Quantity'] > 150]
-
-    fast_moving = df.sort_values(
-        by='Stock_Quantity',
-        ascending=False
-    ).head(10)
+    fast_moving = df.sort_values(by='Stock_Quantity', ascending=False).head(10)
 
     # ======================================================
     # METRICS
     # ======================================================
 
     col1, col2, col3 = st.columns(3)
-
     col1.metric("Low Stock Medicines", len(low_stock))
-
     col2.metric("Overstock Items", len(overstock))
-
     col3.metric("Fast Moving Medicines", len(fast_moving))
 
     # ======================================================
@@ -100,9 +97,7 @@ def main():
     # ======================================================
 
     low_stock.to_csv("low_stock_report.csv", index=False)
-
     overstock.to_csv("overstock_report.csv", index=False)
-
     fast_moving.to_csv("fast_moving_report.csv", index=False)
 
     # ======================================================
@@ -110,7 +105,6 @@ def main():
     # ======================================================
 
     st.subheader("Low Stock Medicines")
-
     st.dataframe(low_stock)
 
     # ======================================================
@@ -118,7 +112,6 @@ def main():
     # ======================================================
 
     st.subheader("Overstock Medicines")
-
     st.dataframe(overstock)
 
     # ======================================================
@@ -126,7 +119,6 @@ def main():
     # ======================================================
 
     st.subheader("Top 10 Fast Moving Medicines")
-
     st.dataframe(fast_moving)
 
     # ======================================================
@@ -136,24 +128,15 @@ def main():
     st.subheader("Fast Moving Medicine Graph")
 
     fig, ax = plt.subplots(figsize=(10, 5))
-
-    ax.bar(
-        fast_moving['Medicine_Name'],
-        fast_moving['Stock_Quantity']
-    )
-
+    ax.bar(fast_moving['Medicine_Name'], fast_moving['Stock_Quantity'])
     plt.xticks(rotation=45)
-
     plt.xlabel("Medicine Name")
-
     plt.ylabel("Stock Quantity")
-
     plt.title("Top 10 Fast Moving Medicines")
 
     st.pyplot(fig)
-=======
-    # Save reports to CSV files
-    low_stock.to_csv("low_stock_report.csv", index=False)
-    overstock.to_csv("overstock_report.csv", index=False)
-    fast_moving.to_csv("fast_moving_report.csv", index=False)
->>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9
+
+
+if __name__ == "__main__":
+    main()
+

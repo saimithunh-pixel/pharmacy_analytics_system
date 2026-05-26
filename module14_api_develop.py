@@ -13,7 +13,11 @@ app = Flask(__name__)
 # LOAD DATASET
 # ======================================================
 
-df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+try:
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+except FileNotFoundError:
+    st.error("Dataset file not found.")
+    st.stop()
 
 # ======================================================
 # INVENTORY API
@@ -63,9 +67,7 @@ def forecast():
 def supplier():
 
     supplier_data = (
-        df.groupby('Supplier_Name')[
-            'Stock_Quantity'
-        ]
+        df.groupby('Supplier_Name')['Stock_Quantity']
         .sum()
         .reset_index()
     )
@@ -84,7 +86,8 @@ def expiry():
     temp_df = df.copy()
 
     temp_df['Expiry_Date'] = pd.to_datetime(
-        temp_df['Expiry_Date']
+        temp_df['Expiry_Date'],
+        errors='coerce'
     )
 
     today = datetime.today()
@@ -109,6 +112,12 @@ def expiry():
 
 def main():
 
+    st.set_page_config(
+        page_title="Pharmacy Analytics System",
+        layout="wide"
+    )
+
+    st.title("Pharmacy Analytics System")
     st.header("API Development Module")
 
     st.write("""
@@ -125,7 +134,6 @@ def main():
     # ======================================================
 
     st.subheader("Dataset Preview")
-
     st.dataframe(df.head())
 
     # ======================================================
@@ -179,9 +187,7 @@ def main():
     st.subheader("Supplier API Sample")
 
     supplier_data = (
-        df.groupby('Supplier_Name')[
-            'Stock_Quantity'
-        ]
+        df.groupby('Supplier_Name')['Stock_Quantity']
         .sum()
         .reset_index()
         .head(5)
@@ -198,7 +204,8 @@ def main():
     temp_df = df.copy()
 
     temp_df['Expiry_Date'] = pd.to_datetime(
-        temp_df['Expiry_Date']
+        temp_df['Expiry_Date'],
+        errors='coerce'
     )
 
     today = datetime.today()
@@ -224,18 +231,9 @@ def main():
     )
 
 # ======================================================
-# RUN FLASK SERVER
+# MAIN
 # ======================================================
 
 if __name__ == '__main__':
-
     main()
-
-    # OPTIONAL:
-    # Uncomment below line ONLY if running Flask separately
-
-<<<<<<< HEAD
-    # app.run(debug=False, use_reloader=False, port=5000)
-=======
-    # app.run(debug=False, use_reloader=False, port=5000)
->>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9
+    
