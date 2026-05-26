@@ -3,81 +3,22 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import squarify
 
-# ---------------------------------------------------
-# PAGE CONFIGURATION
-# ---------------------------------------------------
-
-st.set_page_config(
-    page_title="Pharmacy Analytics System",
-    layout="wide"
-)
-
-# ---------------------------------------------------
-# LOAD DATA
-# ---------------------------------------------------
-
-df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
-
-# ---------------------------------------------------
-# SIDEBAR NAVIGATION
-# ---------------------------------------------------
-
-page = st.sidebar.radio(
-    "Navigation",
-    [
-        "Home",
-        "KPI Dashboard",
-        "Medicine Stock Analysis",
-        "Expiry Monitoring",
-        "Supplier Analytics",
-        "Prescription Trends",
-        "Inventory Optimization",
-        "Demand Forecasting",
-        "SQL Reports",
-        "API Development",
-        "Testing & Validation"
-    ]
-)
-
 # ===================================================
-# HOME PAGE
+# MAIN FUNCTION
 # ===================================================
 
-if page == "Home":
+def main():
 
-    st.markdown("""
-    <h1 style='text-align:center;
-    color:white;
-    background-color:#1565C0;
-    padding:15px;
-    border-radius:12px;'>
-    Pharmacy Analytics System
-    </h1>
-    """, unsafe_allow_html=True)
+    # ---------------------------------------------------
+    # LOAD DATA
+    # ---------------------------------------------------
 
-    st.subheader("Project Overview")
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
 
-    st.write("""
-    This Pharmacy Analytics System helps monitor:
+    # ===================================================
+    # DASHBOARD TITLE
+    # ===================================================
 
-    - Medicine inventory
-    - Expiry tracking
-    - Supplier performance
-    - Demand forecasting
-    - Prescription trends
-    - KPI reporting
-    - SQL reporting
-    - API integration
-    - Testing and validation
-    """)
-
-# ===================================================
-# KPI DASHBOARD
-# ===================================================
-
-elif page == "KPI Dashboard":
-
-    # Dashboard Banner
     st.markdown("""
     <h1 style='text-align:center;
     color:white;
@@ -88,7 +29,10 @@ elif page == "KPI Dashboard":
     </h1>
     """, unsafe_allow_html=True)
 
-    # Sidebar Filters
+    # ===================================================
+    # FILTERS
+    # ===================================================
+
     st.sidebar.header("Filters")
 
     category = st.sidebar.multiselect(
@@ -99,10 +43,16 @@ elif page == "KPI Dashboard":
 
     filtered_df = df[df['Category'].isin(category)]
 
-    # KPI Calculations
+    # ===================================================
+    # KPI CALCULATIONS
+    # ===================================================
+
     total_medicines = filtered_df['Medicine_Name'].nunique()
+
     total_stock = filtered_df['Stock_Quantity'].sum()
+
     total_suppliers = filtered_df['Supplier_Name'].nunique()
+
     total_sales = filtered_df['Units_Sold'].sum()
 
     if total_stock >= 100000:
@@ -115,7 +65,10 @@ elif page == "KPI Dashboard":
     else:
         total_sales_display = f"{total_sales/1000:.1f}K"
 
-    # Data Aggregation
+    # ===================================================
+    # DATA AGGREGATION
+    # ===================================================
+
     low_stock = filtered_df[
         filtered_df['Stock_Quantity']
         <= filtered_df['Reorder_Level']
@@ -158,7 +111,10 @@ elif page == "KPI Dashboard":
         .head(5)
     )
 
+    # ===================================================
     # KPI CARDS
+    # ===================================================
+
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
@@ -175,16 +131,22 @@ elif page == "KPI Dashboard":
 
     st.write("")
 
+    # ===================================================
     # ROW 1 CHARTS
+    # ===================================================
+
     col5, col6 = st.columns(2)
 
     with col5:
+
         st.subheader("Top Selling Medicines")
 
         fig1, ax1 = plt.subplots(figsize=(6,4))
+
         top_medicines.plot(kind='bar', ax=ax1)
 
         ax1.set_xlabel("Medicine")
+
         ax1.set_ylabel("Units Sold")
 
         plt.xticks(rotation=20)
@@ -192,13 +154,17 @@ elif page == "KPI Dashboard":
         st.pyplot(fig1)
 
     with col6:
+
         st.subheader("Low Stock Medicines")
 
         fig2, ax2 = plt.subplots(figsize=(6,4))
 
         labels = [
             f"{name}\n{value/1000:.0f}K"
-            for name, value in zip(low_stock_top.index, low_stock_top.values)
+            for name, value in zip(
+                low_stock_top.index,
+                low_stock_top.values
+            )
         ]
 
         squarify.plot(
@@ -223,7 +189,10 @@ elif page == "KPI Dashboard":
 
     st.write("")
 
+    # ===================================================
     # ROW 2 CHARTS
+    # ===================================================
+
     col7, col8 = st.columns(2)
 
     with col7:
@@ -256,6 +225,7 @@ elif page == "KPI Dashboard":
         )
 
         ax4.set_xlabel("Supplier")
+
         ax4.set_ylabel("Stock Quantity")
 
         plt.xticks(rotation=20)
@@ -264,7 +234,10 @@ elif page == "KPI Dashboard":
 
     st.write("")
 
-    # INSIGHTS
+    # ===================================================
+    # FINAL INSIGHTS
+    # ===================================================
+
     st.subheader("Final Insights")
 
     highest_selling = top_medicines.idxmax()
@@ -282,138 +255,3 @@ elif page == "KPI Dashboard":
         )
 
     st.info("Dashboard Generated Successfully")
-
-# ===================================================
-# MEDICINE STOCK ANALYSIS
-# ===================================================
-
-elif page == "Medicine Stock Analysis":
-
-    st.header("Medicine Stock Analysis")
-
-    st.write("""
-    This module analyzes:
-    - Current stock
-    - Low stock medicines
-    - Reorder levels
-    - Inventory distribution
-    """)
-
-# ===================================================
-# EXPIRY MONITORING
-# ===================================================
-
-elif page == "Expiry Monitoring":
-
-    st.header("Expiry Monitoring System")
-
-    st.write("""
-    This module monitors:
-    - Expiring medicines
-    - Expiry alerts
-    - Critical medicine tracking
-    """)
-
-# ===================================================
-# SUPPLIER ANALYTICS
-# ===================================================
-
-elif page == "Supplier Analytics":
-
-    st.header("Supplier Performance Analytics")
-
-    st.write("""
-    This module evaluates:
-    - Supplier contribution
-    - Delivery efficiency
-    - Supplier performance
-    """)
-
-# ===================================================
-# PRESCRIPTION TRENDS
-# ===================================================
-
-elif page == "Prescription Trends":
-
-    st.header("Prescription Trend Analysis")
-
-    st.write("""
-    This module analyzes:
-    - Prescription trends
-    - Medicine demand
-    - Patient usage patterns
-    """)
-
-# ===================================================
-# INVENTORY OPTIMIZATION
-# ===================================================
-
-elif page == "Inventory Optimization":
-
-    st.header("Inventory Optimization Engine")
-
-    st.write("""
-    This module optimizes:
-    - Stock levels
-    - Reorder planning
-    - Inventory efficiency
-    """)
-
-# ===================================================
-# DEMAND FORECASTING
-# ===================================================
-
-elif page == "Demand Forecasting":
-
-    st.header("Demand Forecasting")
-
-    st.write("""
-    This module predicts:
-    - Future medicine demand
-    - Sales forecasting
-    - Inventory planning
-    """)
-
-# ===================================================
-# SQL REPORTS
-# ===================================================
-
-elif page == "SQL Reports":
-
-    st.header("SQL Reporting & Analytics")
-
-    st.code("""
-SELECT * FROM inventory;
-SELECT * FROM suppliers;
-SELECT * FROM prescriptions;
-""")
-
-# ===================================================
-# API DEVELOPMENT
-# ===================================================
-
-elif page == "API Development":
-
-    st.header("API Development")
-
-    st.code("""
-@app.route('/inventory')
-def inventory():
-    return "Inventory Data"
-""")
-
-# ===================================================
-# TESTING & VALIDATION
-# ===================================================
-
-elif page == "Testing & Validation":
-
-    st.header("Testing & Validation")
-
-    st.write("""
-    Testing Performed:
-    - Forecast accuracy validation
-    - Inventory testing
-    - Supplier metrics testing
-    - Expiry alert validation
-    """)

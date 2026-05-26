@@ -1,13 +1,15 @@
 import streamlit as st
 
 # IMPORT MODULE FILES
-
+import dashboard11  # <-- STEP 3: Added KPI Dashboard import
 import module5_stock_analysis
 import module6_expiry
 import module7_supplier_perfo
 import module8_prescription_analy
 import module9_inventory_optimiz_engine
 import module10_demand_forecasting
+import module12_sql_reporting
+import module13_database_integre
 import module14_api_develop
 import module15_testing_validation
 
@@ -42,12 +44,15 @@ page = st.sidebar.radio(
     "Navigation",
     [
         "Home",
+        "KPI Dashboard",  # <-- STEP 3: Added to sidebar choices
         "Medicine Stock Analysis",
         "Expiry Monitoring",
         "Supplier Analytics",
         "Prescription Trends",
         "Inventory Optimization",
         "Demand Forecasting",
+        "SQL Reporting",
+        "Database Integration",
         "API Development",
         "Testing & Validation"
     ]
@@ -70,9 +75,19 @@ if page == "Home":
     ✔ Demand forecasting  
     ✔ Prescription trends  
     ✔ KPI reporting  
+    ✔ SQL Reporting  
+    ✔ Database Integration  
     ✔ API integration  
     ✔ Testing & validation
     """)
+
+# ======================================================
+# KPI DASHBOARD  <-- STEP 4: Added section above Stock Analysis
+# ======================================================
+
+elif page == "KPI Dashboard":
+
+    dashboard11.main()
 
 # ======================================================
 # STOCK ANALYSIS
@@ -137,3 +152,11 @@ elif page == "API Development":
 elif page == "Testing & Validation":
 
     module15_testing_validation.main()
+
+elif page == "SQL Reporting":
+
+    module12_sql_reporting.show()
+
+elif page == "Database Integration":
+
+    module13_database_integre.show()

@@ -278,158 +278,202 @@ plt.ylabel("")
 
 plt.tight_layout()
 plt.show()"""
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
+# ======================================================
+# MAIN FUNCTION
+# ======================================================
 
-df.drop_duplicates(inplace=True)
+def main():
 
-df['Inventory_Value'] = (
-    df['Stock_Quantity'] * df['Price_per_unit']
-)
+    st.header("Inventory Optimization")
 
-low_stock = df[
-    df['Stock_Quantity'] <= df['Reorder_Level']
-]
+    # ======================================================
+    # LOAD DATA
+    # ======================================================
 
-high_demand = df[
-    df['Units_Sold'] >= (
-        df['Stock_Quantity'] * 0.7
-    )
-]
+    df = pd.read_csv("data1/cleaned_pharmacy_data.csv")
 
-low_stock_graph = (
-    low_stock.groupby('Medicine_Name')['Stock_Quantity']
-    .sum()
-    .sort_values()
-    .head(10)
-)
+    # ======================================================
+    # DATA CLEANING
+    # ======================================================
 
-plt.figure(figsize=(12,6))
+    df.drop_duplicates(inplace=True)
 
-bars = plt.bar(
-    low_stock_graph.index,
-    low_stock_graph.values
-)
+    # ======================================================
+    # INVENTORY VALUE
+    # ======================================================
 
-plt.title(
-    "Top 10 Low Stock Medicines",
-    fontsize=18
-)
-
-plt.xlabel(
-    "Medicine Name",
-    fontsize=13
-)
-
-plt.ylabel(
-    "Stock Quantity",
-    fontsize=13
-)
-
-plt.xticks(
-    rotation=25,
-    ha='right',
-    fontsize=10
-)
-
-plt.grid(
-    axis='y',
-    linestyle='--',
-    alpha=0.4
-)
-
-for bar in bars:
-    yval = bar.get_height()
-
-    plt.text(
-        bar.get_x() + bar.get_width()/2,
-        yval + 1,
-        int(yval),
-        ha='center',
-        fontsize=9
+    df['Inventory_Value'] = (
+        df['Stock_Quantity'] * df['Price_per_unit']
     )
 
-plt.tight_layout()
-plt.show()
+    # ======================================================
+    # LOW STOCK ANALYSIS
+    # ======================================================
 
+    low_stock = df[
+        df['Stock_Quantity'] <= df['Reorder_Level']
+    ]
 
-high_demand_graph = (
-    high_demand.groupby('Medicine_Name')['Units_Sold']
-    .sum()
-    .sort_values(ascending=False)
-    .head(10)
-)
+    # ======================================================
+    # HIGH DEMAND ANALYSIS
+    # ======================================================
 
-plt.figure(figsize=(12,6))
+    high_demand = df[
+        df['Units_Sold'] >= (
+            df['Stock_Quantity'] * 0.7
+        )
+    ]
 
-plt.plot(
-    high_demand_graph.index,
-    high_demand_graph.values,
-    marker='o',
-    linewidth=3
-)
+    # ======================================================
+    # LOW STOCK GRAPH
+    # ======================================================
 
-for x, y in zip(
-    high_demand_graph.index,
-    high_demand_graph.values
-):
-    plt.text(
-        x,
-        y + 1,
-        int(y),
-        ha='center',
-        fontsize=9
+    st.subheader("Top 10 Low Stock Medicines")
+
+    low_stock_graph = (
+        low_stock.groupby('Medicine_Name')['Stock_Quantity']
+        .sum()
+        .sort_values()
+        .head(10)
     )
 
-plt.title(
-    "Top 10 High Demand Medicines",
-    fontsize=18
-)
+    fig1, ax1 = plt.subplots(figsize=(12,6))
 
-plt.xlabel(
-    "Medicine Name",
-    fontsize=13
-)
+    bars = ax1.bar(
+        low_stock_graph.index,
+        low_stock_graph.values
+    )
 
-plt.ylabel(
-    "Units Sold",
-    fontsize=13
-)
+    ax1.set_title(
+        "Top 10 Low Stock Medicines",
+        fontsize=18
+    )
 
-plt.xticks(
-    rotation=25,
-    ha='right',
-    fontsize=10
-)
+    ax1.set_xlabel(
+        "Medicine Name",
+        fontsize=13
+    )
 
-plt.grid(
-    linestyle='--',
-    alpha=0.4
-)
+    ax1.set_ylabel(
+        "Stock Quantity",
+        fontsize=13
+    )
 
-plt.tight_layout()
-plt.show()
+    plt.xticks(
+        rotation=25,
+        ha='right',
+        fontsize=10
+    )
 
+    ax1.grid(
+        axis='y',
+        linestyle='--',
+        alpha=0.4
+    )
 
-category_value = (
-    df.groupby('Category')['Inventory_Value']
-    .sum()
-)
+    for bar in bars:
 
-plt.figure(figsize=(8,8))
+        yval = bar.get_height()
 
-plt.pie(
-    category_value.values,
-    labels=category_value.index,
-    autopct='%1.1f%%'
-)
+        ax1.text(
+            bar.get_x() + bar.get_width()/2,
+            yval + 1,
+            int(yval),
+            ha='center',
+            fontsize=9
+        )
 
-plt.title(
-    "Inventory Value By Category",
-    fontsize=18
-)
+    st.pyplot(fig1)
 
-plt.tight_layout()
-plt.show()
+    # ======================================================
+    # HIGH DEMAND GRAPH
+    # ======================================================
+
+    st.subheader("Top 10 High Demand Medicines")
+
+    high_demand_graph = (
+        high_demand.groupby('Medicine_Name')['Units_Sold']
+        .sum()
+        .sort_values(ascending=False)
+        .head(10)
+    )
+
+    fig2, ax2 = plt.subplots(figsize=(12,6))
+
+    ax2.plot(
+        high_demand_graph.index,
+        high_demand_graph.values,
+        marker='o',
+        linewidth=3
+    )
+
+    for x, y in zip(
+        high_demand_graph.index,
+        high_demand_graph.values
+    ):
+
+        ax2.text(
+            x,
+            y + 1,
+            int(y),
+            ha='center',
+            fontsize=9
+        )
+
+    ax2.set_title(
+        "Top 10 High Demand Medicines",
+        fontsize=18
+    )
+
+    ax2.set_xlabel(
+        "Medicine Name",
+        fontsize=13
+    )
+
+    ax2.set_ylabel(
+        "Units Sold",
+        fontsize=13
+    )
+
+    plt.xticks(
+        rotation=25,
+        ha='right',
+        fontsize=10
+    )
+
+    ax2.grid(
+        linestyle='--',
+        alpha=0.4
+    )
+
+    st.pyplot(fig2)
+
+    # ======================================================
+    # INVENTORY VALUE PIE CHART
+    # ======================================================
+
+    st.subheader("Inventory Value By Category")
+
+    category_value = (
+        df.groupby('Category')['Inventory_Value']
+        .sum()
+    )
+
+    fig3, ax3 = plt.subplots(figsize=(8,8))
+
+    ax3.pie(
+        category_value.values,
+        labels=category_value.index,
+        autopct='%1.1f%%'
+    )
+
+    ax3.set_title(
+        "Inventory Value By Category",
+        fontsize=18
+    )
+
+    st.pyplot(fig3)
