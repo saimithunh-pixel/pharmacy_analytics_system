@@ -234,4 +234,8 @@ if __name__ == '__main__':
     # OPTIONAL:
     # Uncomment below line ONLY if running Flask separately
 
+<<<<<<< HEAD
     # app.run(debug=False, use_reloader=False, port=5000)
+=======
+    # app.run(debug=False, use_reloader=False, port=5000)
+>>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9

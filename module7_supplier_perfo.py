@@ -295,11 +295,19 @@ def main():
     )
 
     st.success(
+<<<<<<< HEAD
         " SUPPLIER PERFORMANCE ANALYTICS COMPLETED SUCCESSFULLY"
+=======
+        "SUPPLIER PERFORMANCE ANALYTICS COMPLETED SUCCESSFULLY"
+>>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9
     )
 
     # SAVE FINAL DATA
     df.to_csv(
         'supplier_performance_data.csv',
         index=False
+<<<<<<< HEAD
     )
+=======
+    )
+>>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9

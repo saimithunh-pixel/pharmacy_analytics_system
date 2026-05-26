@@ -254,4 +254,8 @@ def main():
             f"Immediate Reorder Needed For: {critical_med}"
         )
 
+<<<<<<< HEAD
     st.info("Dashboard Generated Successfully")
+=======
+    st.info("Dashboard Generated Successfully")
+>>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9

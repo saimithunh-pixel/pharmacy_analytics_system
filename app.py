@@ -152,6 +152,7 @@ elif page == "API Development":
 elif page == "Testing & Validation":
 
     module15_testing_validation.main()
+<<<<<<< HEAD
 
 elif page == "SQL Reporting":
 
@@ -160,3 +161,5 @@ elif page == "SQL Reporting":
 elif page == "Database Integration":
 
     module13_database_integre.show()
+=======
+>>>>>>> 94b831f6c24d807b48777c03afa0df4cf2b901e9
